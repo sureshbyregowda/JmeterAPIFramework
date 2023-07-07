@@ -1,0 +1,1851 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.4.1">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="apiTestingFrameWork" enabled="true">
+      <stringProp name="TestPlan.comments">480 420 </stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="rampUpTime" elementType="Argument">
+            <stringProp name="Argument.name">rampUpTime</stringProp>
+            <stringProp name="Argument.value">60</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="tmpDbFileName" elementType="Argument">
+            <stringProp name="Argument.name">tmpDbFileName</stringProp>
+            <stringProp name="Argument.value">importedTestCases.db</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="testCaseLineNum" elementType="Argument">
+            <stringProp name="Argument.name">testCaseLineNum</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="testReportTitle" elementType="Argument">
+            <stringProp name="Argument.name">testReportTitle</stringProp>
+            <stringProp name="Argument.value">Signify API AUTOMATION TEST REPORT</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="testReportName" elementType="Argument">
+            <stringProp name="Argument.name">testReportName</stringProp>
+            <stringProp name="Argument.value">Signify Automated Tests - API TEST REPORT</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="FRAMEWORK_PATH" elementType="Argument">
+            <stringProp name="Argument.name">FRAMEWORK_PATH</stringProp>
+            <stringProp name="Argument.value">${__P(FRAMEWORK_PATH)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="TEST_CASE_LOCATION" elementType="Argument">
+            <stringProp name="Argument.name">TEST_CASE_LOCATION</stringProp>
+            <stringProp name="Argument.value">testCases/</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="BINARIES" elementType="Argument">
+            <stringProp name="Argument.name">BINARIES</stringProp>
+            <stringProp name="Argument.value">${__P(BINARIES)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="service" elementType="Argument">
+            <stringProp name="Argument.name">service</stringProp>
+            <stringProp name="Argument.value">city</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="app_key" elementType="Argument">
+            <stringProp name="Argument.name">app_key</stringProp>
+            <stringProp name="Argument.value">U2g5TEeo8MsASP5HUjOQ4rg1udGsfnH9</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="app_secret" elementType="Argument">
+            <stringProp name="Argument.name">app_secret</stringProp>
+            <stringProp name="Argument.value">UvFR70SCrVteBLQq</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="scope" elementType="Argument">
+            <stringProp name="Argument.name">scope</stringProp>
+            <stringProp name="Argument.value">useradminapi_all_read%20read</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="Test Fragment" enabled="true"/>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Generate Token" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">service=${service}&amp;app_key=${app_key}&amp;app_secret=${app_secret}&amp;scope=${scope}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">api.re.developer.interact-lighting.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/oauth/accesstoken</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">TOKEN</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.token</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Host</stringProp>
+                <stringProp name="Header.value">api.re.developer.interact-lighting.com</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Basic cmFqZXNoLnN1cnlhd2Fuc2hpQHNpZ25pZnkuY29tOjEyMzQ1Njc4OTA=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223 Sampler - Setup Cleanup" enabled="true">
+          <stringProp name="scriptLanguage">groovy</stringProp>
+          <stringProp name="parameters">${FRAMEWORK_PATH}</stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="cacheKey">true</stringProp>
+          <stringProp name="script">//String filename=Parameters + &quot;/apiRunTimeValues.json&quot;;
+String filename=vars.get(&quot;FRAMEWORK_PATH&quot;) + &quot;/&quot; + vars.get(&quot;TEST_REPORTS_LOCATION&quot;) + &quot;/apiRunTimeValues.json&quot;;
+log.info(&quot;Run time json file: &quot; + filename)
+
+File file1 = new File(filename)
+if (new File(filename).exists()) { 
+    log.info(&quot;JSON File exist&quot;);
+} else {
+    log.info(&quot;JSON File not exist,create it&quot;);
+    file1.write &apos;{&quot;jmeter&quot;:&quot;run time values&quot;}&apos;
+}
+
+//String batchfile=Parameters +&quot;/runUserMethod.bat&quot;;
+String batchfile=vars.get(&quot;USER_BATCH_FILE&quot;); // user defined batch file
+if(batchfile){
+//if batch file is provided on config as USER_BATCH_FILE
+log.info(&quot;Run time batch file: &quot; + batchfile)
+  File file2 = new File(batchfile)
+if (new File(batchfile).exists()) { 
+    log.info(&quot;Batch File exist&quot;);
+} else {
+    log.info(&quot;Batch File not exist,create it&quot;);
+    file2.write &quot;echo off&quot;
+}
+}
+
+
+log.info(&quot;Create random variables&quot;);
+
+def generator = { String alphabet, int n -&gt;
+  new Random().with {
+    (1..n).collect { alphabet[ nextInt( alphabet.length() ) ] }.join()
+  }
+}
+randomValue = generator( ((&apos;A&apos;..&apos;Z&apos;)+(&apos;0&apos;..&apos;9&apos;)+(&apos;a&apos;..&apos;z&apos;)).join(), 15 )
+
+log.info(&quot;randomValue=&quot;+randomValue);
+
+randomNumber = generator( (&apos;0&apos;..&apos;9&apos;).join(), 15 )
+
+log.info(&quot;randomNumber=&quot;+randomNumber);
+
+	
+activeFlag=vars.get(&quot;activeFlag&quot;)
+log.info(&quot;change this activeFlag=&quot;+activeFlag);
+if(activeFlag == &quot;Y&quot;)
+	activeFlag=&quot;N&quot;
+else
+	activeFlag=&quot;Y&quot;
+
+vars.put(&quot;randomValue&quot;, randomValue)
+vars.put(&quot;randomNumber&quot;, randomNumber)
+vars.put(&quot;activeFlag&quot;, activeFlag)
+
+</stringProp>
+          <boolProp name="com.blazemeter.jmeter.debugger.engine.Debugger">false</boolProp>
+        </JSR223Sampler>
+        <hashTree/>
+        <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="While Controller" enabled="true">
+          <stringProp name="WhileController.condition">${__BeanShell( ${testCaseLineNum} &lt;= ${STEPNUMBER_#} )}</stringProp>
+          <stringProp name="TestPlan.comments">execute only till end of available apis
+${__BeanShell( ${testCaseLineNum} &lt;= ${API_URL_#} )}</stringProp>
+        </WhileController>
+        <hashTree>
+          <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223 Sampler" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">//def osType    = &quot;Linux&quot;
+def osType    = &quot;${__property(os.name)}&quot;
+def lineCount = vars.get(&quot;testCaseLineNum&quot;)
+vars.put(&quot;TC_NUMBER&quot;,         vars.get(&quot;TC_NUMBER_&quot;       + lineCount))
+vars.put(&quot;TEST_DESC&quot;,         vars.get(&quot;TEST_DESC_&quot;       + lineCount))
+vars.put(&quot;STEPNUMBER&quot;,        vars.get(&quot;STEPNUMBER_&quot;      + lineCount))
+vars.put(&quot;PRIORITY&quot;,          vars.get(&quot;PRIORITY_&quot;        + lineCount))
+vars.put(&quot;LABEL&quot;,             vars.get(&quot;LABEL_&quot;           + lineCount))
+vars.put(&quot;METHOD&quot;,            vars.get(&quot;METHOD_&quot;          + lineCount))
+vars.put(&quot;API_RESOUCES&quot;,      vars.get(&quot;API_RESOUCES_&quot;    + lineCount))
+vars.put(&quot;HEADER&quot;,            vars.get(&quot;HEADER_&quot;          + lineCount))
+vars.put(&quot;EXPECTED_RESPONSE_CODE&quot;, 
+          vars.get(&quot;EXPECTED_RESPONSE_CODE_&quot;    + lineCount))
+vars.put(&quot;EXPECTED_RESPONSE_MESSAGE&quot;, 
+          vars.get(&quot;EXPECTED_RESPONSE_MESSAGE_&quot; + lineCount))
+vars.put(&quot;REPONSE_VALUE_EXTRACTION&quot;,  
+          vars.get(&quot;REPONSE_VALUE_EXTRACTION_&quot;  +  lineCount))
+vars.put(&quot;EXTRACTED_VALUE&quot;,   vars.get(&quot;EXTRACTED_VALUE_&quot; + lineCount))
+vars.put(&quot;GATEWAY_IP&quot;,        vars.get(&quot;GATEWAY_IP_&quot;      + lineCount))
+vars.put(&quot;GATEWAY_PORT&quot;,      vars.get(&quot;GATEWAY_PORT_&quot;    + lineCount))
+vars.put(&quot;WAIT_TIME_SEC&quot;,     vars.get(&quot;WAIT_TIME_SEC_&quot;   + lineCount))
+/*
+seat updates: June 2021: Added USER_METHOD as an optional column
+*/
+log.info(&quot;debug USER_METHOD=&quot; + vars.get(&quot;USER_METHOD_&quot;   + lineCount))
+if ( vars.get(&quot;USER_METHOD_&quot;   + lineCount) == null ) {
+	vars.put(&quot;USER_METHOD&quot;,&quot;&quot;)
+} else {
+     vars.put(&quot;USER_METHOD&quot;,     vars.get(&quot;USER_METHOD_&quot;   + lineCount))
+}
+vars.put(&quot;PROTOCOL&quot;,          vars.get(&quot;PROTOCOL_&quot;        + lineCount));
+
+def apiUrl   = vars.get(&quot;API_URL_&quot; + lineCount)
+def value    = vars.get(apiUrl.replaceAll(&quot;[^A-Za-z0-9_]&quot;, &quot;&quot;))
+def splitVal = value.split(&quot;:&quot;) as String[]
+if (splitVal.length == 2) {
+    vars.put(&quot;API_URL&quot;,  splitVal[0])
+    vars.put(&quot;PORT_NUM&quot;, splitVal[1])
+    if(vars.get(&quot;API_URL&quot;) =~ /(\d+\.){3}\d+/){
+        vars.put(&quot;PROTOCOL&quot;, &quot;http&quot;)
+    }
+} else {
+    vars.put(&quot;API_URL&quot;,  splitVal[0])
+    vars.put(&quot;PORT_NUM&quot;, &quot;&quot;)
+    vars.put(&quot;PROTOCOL&quot;,          vars.get(&quot;PROTOCOL_&quot;        + lineCount))
+}
+if(vars.get(&quot;API_URL&quot;) =~ /(\d+\.){3}\d+/){
+	vars.put(&quot;PROTOCOL&quot;, &quot;http&quot;)
+}
+
+if(osType.contains(&quot;Linux&quot;)) {
+    def apiBody = vars.get(&quot;API_DATA_&quot;                    + lineCount)
+    def rspBody = vars.get(&quot;EXPECTED_RESPONSE_DATA_&quot;      + lineCount)
+    //apiBody     = apiBody.replace(&apos;\\\&apos;, &apos;/&apos;)	//	not working
+    //rspBody     = rspBody.replace(&apos;\\\&apos;, &apos;/&apos;)	//	not working
+    vars.put(&quot;API_DATA&quot;, apiBody)
+    vars.put(&quot;EXPECTED_RESPONSE_DATA&quot;, rspBody)
+} else {
+    vars.put(&quot;API_DATA&quot;,      vars.get(&quot;API_DATA_&quot;        + lineCount))
+    vars.put(&quot;EXPECTED_RESPONSE_DATA&quot;, 
+             vars.get(&quot;EXPECTED_RESPONSE_DATA_&quot; + lineCount))
+}
+
+def stepNum = vars.get(&quot;STEPNUMBER&quot;)
+if (stepNum =~ /^([2-9])?1$/) {
+    stepNum = stepNum + &quot;st&quot;
+} else if (stepNum =~ /^12$/) {
+    stepNum = stepNum + &quot;ft&quot;
+} else if (stepNum =~ /^([2-9])?2$/) {
+    stepNum = stepNum + &quot;nd&quot;
+} else if (stepNum =~ /^([2-9])?3$/) {
+    stepNum = stepNum + &quot;rd&quot;
+} else {
+    stepNum = stepNum + &quot;th&quot;
+}
+
+log.info(&quot;Executing \&quot;&quot; + stepNum + &quot; (&quot; + vars.get(&quot;LABEL&quot;)       +
+         &quot;)\&quot; step number of test case \&quot;&quot; + vars.get(&quot;TC_NUMBER&quot;) +
+         &quot;\&quot;, having priority \&quot;&quot; + vars.get(&quot;PRIORITY&quot;)           +
+         &quot;. Test description \&quot;&quot;  + vars.get(&quot;TEST_DESC&quot;)   + &quot;.&quot;)
+
+def count = Integer.parseInt(lineCount) + 1
+vars.put(&quot;testCaseLineNum&quot;, Integer.toString(count))
+
+SampleResult.setIgnore()</stringProp>
+          </JSR223Sampler>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="TC-${TC_NUMBER}_STEP-${STEPNUMBER}_LABEL-${LABEL}" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">${__eval(${__eval(${API_DATA})})}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${__eval(${API_URL})}</stringProp>
+            <stringProp name="HTTPSampler.port">${__eval(${PORT_NUM})}</stringProp>
+            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+            <stringProp name="HTTPSampler.path">${__eval(${API_RESOUCES})}</stringProp>
+            <stringProp name="HTTPSampler.method">${METHOD}</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.proxyHost">${GATEWAY_IP}</stringProp>
+            <stringProp name="HTTPSampler.proxyPort">${GATEWAY_PORT}</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">${API_DATA})} ${GATEWAY_IP} ${GATEWAY_PORT}</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers"/>
+            </HeaderManager>
+            <hashTree/>
+            <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">/* ========================================================================= */
+/* BELOW CODE IS FOR                                                         */
+/* 1. ADD HEADERS TO REQUESTS WHICH ARE SPECIFIED IN TEST CASE/CSV FILE      */
+/* 2. PREPARE JSON EXTACTOR &quot;MATCH NUMBERS&quot; (0) &amp; DEFAULT VALUES, (-1)       */
+/* ========================================================================= */
+import org.apache.jmeter.protocol.http.control.Header    
+import org.apache.jmeter.protocol.http.sampler.HTTPSampler
+import org.apache.jmeter.protocol.http.util.HTTPFileArg
+
+final int MINUS_ONE = -1;   // defining variable with value -1
+final int ZERO      =  0;   // defining variable with value  0
+final int ONE       =  1;   // defining variable with value  1
+
+//String postData = vars.get(&quot;API_DATA&quot;).split(&quot;,&quot;) as String []
+String postData = vars.get(&quot;API_DATA&quot;)
+// MULTI PART REQUEST
+if (postData =~ /(i?)MULTIPART_UPLOAD/ &amp;&amp; sampler.getMethod() =~ /P(U|OS)T/){
+    log.info(&quot;MULTIPART REQUEST, has post data: &quot; + postData)
+    // extract file, parameter &amp; mime type from csv
+    def uploadFile    = (postData =~ /filePath:(.+?\.\w+),/)[0][1]
+    def parameterName = (postData =~ /parameterName:(.*),/)[0][1]
+    def mimeType      = (postData =~ /mimeType:(.*)/)[0][1]	
+    def formParameters      = (postData =~ /FORM_PARAMS=&gt;(.*)/)[0][1]	// added form parameters: June2021
+    // extracting filename &amp; extrapolate variables 
+    if (uploadFile =~ /\$\{/) {
+        def filePath = (uploadFile =~ /\$\{(.+?)\}/).collect {it[1]}
+        def len      = filePath.size
+        def absoluteFilePath = &quot;&quot;
+        for (def count = 0; count &lt; len; count++) {
+            absoluteFilePath = absoluteFilePath + vars.get(filePath[count])
+        }
+        uploadFile = absoluteFilePath + (uploadFile =~ /.*\}(.*)/)[0][1]
+    }
+    log.info(&quot;file to be uploaded: &quot; + uploadFile + &quot;, Parameter Name: &quot; + 
+            parameterName + &quot;, mime type specified for file: &quot; + mimeType)
+    sampler.setDoMultipartPost(true)
+    if ( sampler.getDoMultipartPost() ) {
+        sampler.setHTTPFiles([new HTTPFileArg(uploadFile, parameterName, mimeType)] as HTTPFileArg[])
+	}
+	/*
+seat updates: June 2021: Added FORM_PARAMS
+*/
+ if(formParameters.length() &gt; ZERO) {
+ 	log.info(&quot;Details of Form parameters being addded: \&quot;&quot; + formParameters + &quot;\&quot;&quot;)
+    def paramElements  = formParameters.split(&quot;,&quot;) as String[]
+    def numParams      = paramElements.length
+
+    for(def count = ZERO; count &lt; numParams; count++ ) {
+        def paramNameValue    = paramElements[count].split(&quot;:&quot;) as String[]
+        def paramNameValueLen = paramNameValue.length;
+        log.info(&quot;Form Parameter:&quot; + paramNameValue[ZERO])
+        log.info(&quot;Form Value:&quot; + paramNameValue[ONE])
+	   sampler.addArgument(paramNameValue[ZERO], paramNameValue[ONE]);
+        
+    }
+ }
+
+}
+
+
+log.info(&quot;Test step details: \&quot;Api method://uri: \&quot;&quot; + sampler.getMethod() + 
+   &quot; &quot; + sampler.getUrl() + &quot;\&quot;&quot;)
+if (sampler.getMethod() =~ /P(U|OS)T/) {
+   log.info(&quot;Request has following body:&quot; + sampler.getArguments())
+}
+
+/* ======== CODE FOR READING CSV FILE AND ADDING HEADER STARTS HERE ======== */
+/* ========================================================================= */
+/* GET SIZE OF HEADER ADDED, USED IN BEANSHELL POST PROCESSOR FOR CLEAN UP   */
+/* OR REMOVING HEADER                                                        */
+/* ========================================================================= */
+def requestHeader = vars.get(&quot;HEADER&quot;).replaceAll(&quot;[\r\n]+&quot;,&quot;&quot;)
+//log.info(&quot;Details of header being addded: \&quot;&quot; + requestHeader + &quot;\&quot;&quot;)
+if(requestHeader.length() &gt; ZERO) {
+    def headerElements  = requestHeader.split(&quot;,&quot;) as String[]
+    def numHeaders      = headerElements.length
+
+    for(def count = ZERO; count &lt; numHeaders; count++ ) {
+        def headerNameValue    = headerElements[count].split(&quot;:&quot;) as String[]
+        def headerNameValueLen = headerNameValue.length;
+
+        if (headerNameValue[ONE] =~ /\$\{/) {
+            def replaceValue = headerNameValue[ONE] =~ /\$\{(.+?)\}/
+            headerNameValue[ONE] = vars.get(replaceValue[ZERO][ONE])
+        }
+        
+        // ADD HEADER KEY AND VALUE TO HEADER MANAGER
+        if (vars.get(&quot;TEST_ENV&quot;).equals(&quot;GATEWAY-PPR&quot;) &amp;&amp; !(vars.get(&quot;API_URL&quot;).contains(&quot;login&quot;))){
+            if (headerNameValue[ZERO].equals(&quot;Authorization&quot;)) {
+                // Get bearer Token and save it
+                def bearerToken = &quot;Bearer &quot; + vars.get(&quot;BEARER_TOKEN&quot;)    
+                ctx.getCurrentSampler().getHeaderManager().add(new Header(&quot;Authorization&quot;, bearerToken))    
+                ctx.getCurrentSampler().getHeaderManager().add(new Header(&quot;Authentication&quot;, headerNameValue[ONE]))    
+            } else {
+                ctx.getCurrentSampler().getHeaderManager().add(new Header(headerNameValue[ZERO], headerNameValue[ONE]))    
+            }
+        } else {
+            ctx.getCurrentSampler().getHeaderManager().add(new Header(headerNameValue[ZERO], headerNameValue[ONE]))    
+        }
+    }
+} else {
+    log.info (&quot;No header defined for test step, exiting... &quot;)
+    ctx.getEngine().stopTest()
+    return 1
+}
+/* ========= CODE FOR READING CSV FILE AND ADDING HEADER ENDS HERE ========= */
+/* ========================================================================= */
+/* GET SIZE OF HEADER ADDED, USED IN BEANSHELL POST PROCESSOR FOR CLEAN UP   */
+/* OR REMOVING HEADER                                                        */
+/* ========================================================================= */
+def headerSize = ctx.getCurrentSampler().getHeaderManager().size()
+vars.put(&quot;headerLength&quot;, Integer.toString(headerSize))
+log.info(&quot;Numb request headers added: &quot; + headerSize + &quot;, header details: &quot; + 
+           ctx.getCurrentSampler().getHeaderManager().getHeaders())
+            
+/* ========================================================================= */
+/* == CODE FOR READING CSV FILE AND EXTRACTING JSON RESPONSE STARTS HERE  == */
+def jsonMatchNumber = &quot;0&quot;;  // VARIABLE FOR SAVING JSON EXTACTOR MATCH NUMBER
+def defaultValues   = &quot;-1&quot;; // VARIABLE FOR SAVING JSON EXTACTOR DEFAULT NUMBER
+
+// SPLIT REPONSE VALUES TO BE EXTRACTED TO BE USED &amp; GET THEIR LENGHT
+def arraySize = 
+          (vars.get(&quot;REPONSE_VALUE_EXTRACTION&quot;).split(&quot;;&quot;) as String[]).length
+
+/* ========================================================================= */
+/* ITERATE OVER THE NUMBER OF VALUES TO BE EXTRACTED                         */
+/* 1. ADD &quot;0&quot; FOR JSON MATCH NUMBER (0 FOR RANDOM VALUES TO BE SELECTED)     */
+/* 2. ADD -1 AS DEFAULT VALUES                                               */
+/* ========================================================================= */
+for (def count = ONE; count &lt; arraySize; count++) {
+    jsonMatchNumber = jsonMatchNumber + &quot;;&quot; + Integer.toString(ZERO)
+    defaultValues   = defaultValues   + &quot;;&quot; + Integer.toString(MINUS_ONE)
+}
+log.info (&quot;JSON MATCH NUMBER  : &quot; + jsonMatchNumber)
+log.info (&quot;JSON DEFAULT VALUES: &quot; + defaultValues)
+/* EXPORT LOCAL VARIABLES TO JMETER */
+vars.put( &quot;jsonMatchNumber&quot;, jsonMatchNumber)
+vars.put( &quot;defaultValues&quot;  , defaultValues  )</stringProp>
+            </JSR223PreProcessor>
+            <hashTree/>
+            <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="BeanShell PreProcessor" enabled="true">
+              <boolProp name="resetInterpreter">true</boolProp>
+              <stringProp name="parameters">${__eval(${API_URL})} ${__eval(${API_RESOUCES})}</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="script">/* ========================================================================= */
+/* BELOW CODE IS FOR   -- SEAT UPDATES -- Multiple records handling          */
+/* 1. ADD HEADERS TO REQUESTS WHICH ARE SPECIFIED IN TEST CASE/CSV FILE      */
+/* 2. PREPARE JSON EXTACTOR &quot;MATCH NUMBERS&quot; (0) &amp; DEFAULT VALUES, (-1)       */
+/* ========================================================================= */
+
+import org.apache.jmeter.protocol.http.control.Header;
+
+final static int MINUS_ONE = -1;   // defining variable with value -1
+final static int ZERO      =  0;   // defining variable with value  0
+final static int ONE       =  1;   // defining variable with value  1
+
+/* ========================================================================= */
+/* == CODE FOR READING CSV FILE AND EXTRACTING JSON RESPONSE STARTS HERE  == */
+String jsonMatchNumber;  // VARIABLE FOR SAVING JSON EXTACTOR MATCH NUMBER
+String defaultValues;    // VARIABLE FOR SAVING JSON EXTACTOR DEFAULT NUMBER
+
+// SPLIT REPONSE VALUES TO BE EXTRACTED TO BE USED &amp; GET THEIR LENGHT
+String[] jsonPathExprArray  = vars.get(&quot;REPONSE_VALUE_EXTRACTION&quot;).split(&quot;;&quot;);
+int arraySize               = jsonPathExprArray.length;
+
+/* ========================================================================= */
+/* ITERATE OVER THE NUMBER OF VALUES TO BE EXTRACTED                         */
+/* 1. ADD &quot;0&quot; FOR JSON MATCH NUMBER (0 FOR RANDOM VALUES TO BE SELECTED)     */
+/* 2. ADD -1 AS DEFAULT VALUES                                               */
+/* ========================================================================= */
+for (int count = ZERO; count &lt; arraySize; count++) {
+  if (count == ZERO){
+  	 if ( jsonPathExprArray[count].contains(&quot;$..&quot;) ) {	//	if condition added on 18-march
+        jsonMatchNumber = Integer.toString(MINUS_ONE);
+        defaultValues   = Integer.toString(MINUS_ONE);
+  	 } else {
+        jsonMatchNumber = Integer.toString(ZERO);
+        defaultValues   = Integer.toString(MINUS_ONE);
+	 }
+    } else {
+	  	 if ( jsonPathExprArray[count].contains(&quot;$..&quot;) ) {	//	if condition added for seat updates
+        		jsonMatchNumber = jsonMatchNumber + &quot;;&quot; + Integer.toString(MINUS_ONE);
+        		defaultValues   = defaultValues   + &quot;;&quot; + Integer.toString(MINUS_ONE);
+	  	 } else {
+        		jsonMatchNumber = jsonMatchNumber + &quot;;&quot; + Integer.toString(ZERO);
+        		defaultValues   = defaultValues   + &quot;;&quot; + Integer.toString(MINUS_ONE);
+		 }
+
+    }
+    
+    log.info (&quot;BEANSHELL PRE-PROCESSOR: JSON MATCH NUMBER: &quot; + jsonMatchNumber);
+    log.info (&quot;BEANSHELL PRE-PROCESSOR: DEFAULT VALUES: &quot;    + defaultValues);
+}
+/* EXPORT LOCAL VARIABLES TO JMETER */
+vars.put( &quot;jsonMatchNumber&quot;, jsonMatchNumber);
+vars.put( &quot;defaultValues&quot;  , defaultValues  );
+</stringProp>
+            </BeanShellPreProcessor>
+            <hashTree/>
+            <JSR223Timer guiclass="TestBeanGUI" testclass="JSR223Timer" testname="JSR223 Timer" enabled="true">
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">def sleepTimer = vars.get(&quot;WAIT_TIME_SEC&quot;)
+sleepTimer     = (sleepTimer.length() &gt; 0) ? (sleepTimer.toInteger() * 1000) : (1 * 100)
+log.info(&quot;Pausing execution for : &quot; + sleepTimer + &quot; milli-sec&quot;)
+return sleepTimer</stringProp>
+              <stringProp name="scriptLanguage">groovy</stringProp>
+            </JSR223Timer>
+            <hashTree/>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">/* ========================================================================= */
+import org.apache.jmeter.protocol.http.control.Header
+import org.apache.jmeter.protocol.http.control.HeaderManager
+
+final int ZERO      =  0;   // defining variable with value  0
+final int ONE       =  1;   // defining variable with value  1
+
+HeaderManager manager = ctx.getCurrentSampler().getHeaderManager()
+
+
+// June 2021 - seat update
+String downloadPath = vars.get(&quot;FRAMEWORK_PATH&quot;) + &quot;/&quot; + vars.get(&quot;TEST_REPORTS_LOCATION&quot;) 
+log.info(&quot;Run time path: &quot; + downloadPath)
+vars.put(&quot;downloadPath&quot;, downloadPath)
+
+
+ // June 2021: run time variables: start
+log.info(&quot;get randomValue: &quot; +  vars.get(&quot;randomValue&quot; ))
+log.info(&quot;get randomNumber: &quot; +  vars.get(&quot;randomNumber&quot; ))
+log.info(&quot;get activeFlag: &quot; +  vars.get(&quot;activeFlag&quot; ))
+ // June 2021: run time variables: end
+ 
+log.info(&quot;Post request operations, deleting headers ...&quot;)
+log.info(&quot;Deleting &quot; +  manager.size() + &quot; headers added&quot;)
+// clear all headers added
+ctx.getCurrentSampler().getHeaderManager().clear()
+log.info(&quot;Post deleting, num headers: &quot; + manager.size() + 
+         &quot;, headers: &quot; + manager.getHeaders())</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+              <stringProp name="JSONPostProcessor.referenceNames">${EXTRACTED_VALUE}</stringProp>
+              <stringProp name="JSONPostProcessor.jsonPathExprs">${__eval(${REPONSE_VALUE_EXTRACTION})}</stringProp>
+              <stringProp name="JSONPostProcessor.match_numbers">${__eval(${jsonMatchNumber})}</stringProp>
+              <stringProp name="JSONPostProcessor.defaultValues">${__eval(${defaultValues})}</stringProp>
+              <stringProp name="Sample.scope">all</stringProp>
+              <stringProp name="TestPlan.comments">${__eval(${defaultValue})}</stringProp>
+            </JSONPostProcessor>
+            <hashTree/>
+            <JSR223Assertion guiclass="TestBeanGUI" testclass="JSR223Assertion" testname="JSR223 Assertion" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters">${__eval(${__eval(${EXPECTED_RESPONSE_DATA})})}</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">import groovy.json.JsonSlurper
+import org.skyscreamer.jsonassert.JSONCompare
+import org.skyscreamer.jsonassert.JSONCompareResult
+import org.skyscreamer.jsonassert.JSONCompareMode
+/* ========================================================================= */
+/* BELOW CODE IS FOR: ASSERTING TEST RESULTS WITH EXPECTED RESULTS DEFINED   */
+/* IN TEST CASE                                                              */
+/* ========================================================================= */
+
+/* ========================================================================= */
+/* method   : getSetRspCodeMsg                                               */
+/* arguments: 3 arguments                                                    */
+/*            string response code                                           */
+/*            string response message                                        */
+/*            string str indicating expected or actual                       */
+/* returns  : if expected response code &amp; response message is not defined in */
+/*               test step set it to 200 &amp; &quot;ok&quot; else return back what was set*/
+/*            if actual response code &amp; response message is not defined      */
+/*               return false                                                */
+/* ========================================================================= */
+def getSetRspCodeMsg(def rspCode, def rspMsg, def str) {
+    final String DEFAULT_RESPONSE_CODE = 200
+    final String DEFAULT_RESPONSE_MSG  = &quot;OK&quot;
+    
+    rspCode = rspCode =~ /\d+/ ? rspCode : str =~ /(i?)expected/ ? DEFAULT_RESPONSE_CODE : false
+    rspMsg  = rspMsg  ? rspMsg  : str =~ /(i?)expected/ ? DEFAULT_RESPONSE_MSG  : false
+    
+    log.info(str.capitalize() + &quot; response code is: &quot; + rspCode)
+    log.info(str.capitalize() + &quot; response Msg is : &quot; + rspMsg)
+    
+    return [rspCode, rspMsg]
+}
+
+def checkIfJson(def str) {
+    if (str =~ /^(\{|\[)/ &amp;&amp; str =~ /(\}|\])$/) {
+        return true
+    } else {
+        return false
+    }
+}
+
+def compareJsonResponse(def expRespData, def actRspData, def cmpMode) {
+    jsonCompareResult = JSONCompare.compareJSON(expRespData, actRspData, cmpMode)
+	if(jsonCompareResult.passed()) {
+        log.info(&quot;PASS: Expected and actual response data match&quot;)
+        vars.put(&quot;EXPECTED_RESP_DATA_DIFF&quot;, &quot;&quot;)
+        return true
+    } else {
+        log.info(&quot;FAIL: Expected and actual response data don&apos;t match&quot; + jsonCompareResult.getMessage())
+        vars.put(&quot;EXPECTED_RESP_DATA_DIFF&quot;, jsonCompareResult.getMessage())
+        return false
+    }
+}
+
+/* ========================================================================= */
+/*                            SET VARIABLES HERE                             */
+/* ========================================================================= */
+//variable for saving expected and actual Response Message
+(expectedResponseCode, expectedResponseMsg) = getSetRspCodeMsg(vars.get(&quot;EXPECTED_RESPONSE_CODE&quot;), vars.get(&quot;EXPECTED_RESPONSE_MESSAGE&quot;), &quot;expected&quot;)
+
+(actualResponseCode,   actualResponseMsg)   = getSetRspCodeMsg(SampleResult.getResponseCode(), SampleResult.getResponseMessage(), &quot;actual&quot;)
+
+//variable for saving expected and actual Response data/
+expectedResponseData      = vars.get(&quot;EXPECTED_RESPONSE_DATA&quot;)
+actualResponseData        = SampleResult.getResponseDataAsString()
+
+// set failure flag, if test passes set to pass
+Failure                   = true
+
+// set failure message to be displayed, also to failure. 
+// Append failure details with test case details
+FailureMessage            = &quot;TEST STEP FAILED, CHECK TEST DETAILS&quot;
+
+// flags which indicate actual and expected response code and data has matched
+boolean RESPONSE_CODE_MSG_MATCH  = false
+boolean RESPONSE_DATA_MATCH      = false
+JSONCompareResult jsonCompareResult = null
+
+if(actualResponseCode =~ /\d+/) {
+    RESPONSE_CODE_MSG_MATCH = (actualResponseCode == expectedResponseCode) ? true : false
+    RESPONSE_CODE_MSG_MATCH ? log.info(&quot;PASS: Expected response code equals actual response code&quot;) : log.info(&quot;FAIL: Expected and actucal response code or dont match&quot;)
+} else {
+    RESPONSE_CODE_MSG_MATCH  = false
+    log.info(&quot;FAIL: Actual response is not defined&quot;)
+}
+
+if(RESPONSE_CODE_MSG_MATCH) {
+    expRespData          = expectedResponseData
+    expectedResponseData = Parameters
+    log.info(&quot;Expected response data: &quot; + expectedResponseData)
+    log.info(&quot;Actual response data  : &quot; + actualResponseData)
+    // add if condition for partial validation - seat updates
+	if ( vars.get(&quot;EXPECTED_RESPONSE_DATA&quot;).contains(&quot;.partial&quot;) ) {
+			log.info (&quot;-----------------------------&gt; HERE PARTIAL TEXT FILE&quot;)
+		     expectedResponseData = Parameters.replaceAll(&quot;[\r\n]+&quot;,&quot;&quot;)
+			// for partial match
+			if ( actualResponseData.contains(expectedResponseData) ) {
+                RESPONSE_DATA_MATCH = true;
+                log.info(&quot;PARTIAL ASSERTION: PASS, expected Response &quot; + 
+				    &quot;Data: &quot; + expectedResponseData);
+                log.info(&quot;PARTIAL ASSERTION: PASS, actual   Response &quot; + 
+					         &quot;Data: &quot; + actualResponseData);
+             	} else {
+                    RESPONSE_DATA_MATCH = false;
+                    log.info(&quot;PARTIAL ASSERTION: FAIL, expected Response &quot; + 
+					         &quot;Data: &quot; + expectedResponseData);
+                    log.info(&quot;PARTIAL ASSERTION: FAIL, actual   Response &quot; + 
+					         &quot;Data: &quot; + actualResponseData);
+            }
+       } else if ( vars.get(&quot;EXPECTED_RESPONSE_DATA&quot;).contains(&quot;.unformatted&quot;) ) {	// unformatted json validation - seat updates
+			log.info (&quot;-----------------------------&gt; HERE unformatted json TEXT FILE&quot;)
+		     expectedResponseData = Parameters.replaceAll(&quot;[\r\n]+&quot;,&quot;&quot;)
+               expectedResponseData = new JsonSlurper().parseText(expectedResponseData)
+               actualResponseData   = new JsonSlurper().parseText(actualResponseData)
+			//actualResponseData.equals(expectedResponseData)
+			//if ( actualResponseData.equals(expectedResponseData) ) 
+			if (actualResponseData == expectedResponseData) {
+                RESPONSE_DATA_MATCH = true;
+                log.info(&quot;unformatted ASSERTION: PASS, expected Response &quot; + 
+				    &quot;Data: &quot; + expectedResponseData);
+                log.info(&quot;unformatted ASSERTION: PASS, actual   Response &quot; + 
+					         &quot;Data: &quot; + actualResponseData);
+             	} else {
+                    RESPONSE_DATA_MATCH = false;
+                    log.info(&quot;unformatted ASSERTION: FAIL, expected Response &quot; + 
+					         &quot;Data: &quot; + expectedResponseData);
+                    log.info(&quot;unformatted ASSERTION: FAIL, actual   Response &quot; + 
+					         &quot;Data: &quot; + actualResponseData);
+            }
+    //add else block: origincal code
+    } else {
+    if(expRespData =~ /\.[txt|json]/ &amp;&amp; checkIfJson(expectedResponseData)) {
+        log.info(&quot;Response body validation using text file given&quot;)
+        RESPONSE_DATA_MATCH = compareJsonResponse(expectedResponseData, actualResponseData, JSONCompareMode.STRICT)
+    } else {
+        log.info(&quot;Validation of partial response body&quot;)
+        if (checkIfJson(expectedResponseData)) {
+            RESPONSE_DATA_MATCH = compareJsonResponse(expectedResponseData, actualResponseData, JSONCompareMode.LENIENT)
+        } else {
+            if(expectedResponseData) {
+                def expRspData       = expectedResponseData.split(&quot;,&quot;) as String[]
+                def expRspDataLenght = expRspData.length
+                expectedResponseData = &quot;&quot;
+                for(def count = 0; count &lt; expRspDataLenght; count++) {
+                    expRspData[count]     = expRspData[count].replaceAll(&quot;[\r\n]+&quot;,&quot;&quot;)
+                    expectedResponseData += expRspData[count]
+                    if(actualResponseData =~ /${expRspData[count]}/) {
+                        RESPONSE_DATA_MATCH = true
+                        log.info(&quot;PASS: Actual response data contains partial expected response data&quot;)
+                    } else {
+                        log.info(&quot;FAIL: Actual response data dosen&apos;t contains partial expected response data&quot;)
+                        RESPONSE_DATA_MATCH = false
+                    }
+                }
+            } else {
+                log.info(&quot;Validation of partial response body, no validation of response body defined&quot;)
+                RESPONSE_DATA_MATCH = true
+            }
+        }
+    }
+    }
+} else {
+    RESPONSE_DATA_MATCH = false
+}
+
+log.info(&quot;\&quot;RESPONSE_CODE_MSG_MATCH\&quot;: &quot; + RESPONSE_CODE_MSG_MATCH + &quot;, \&quot;RESPONSE_DATA_MATCH VAL\&quot;: &quot; + RESPONSE_DATA_MATCH)
+
+def testStatus(boolean status) {
+   if(!status) {
+        FailureMessage = FailureMessage                                       +
+        &quot;------------------------- Response code -------------------------\n&quot; + 
+        &quot;Exp: &quot; + expectedResponseCode + &quot;, Actual: &quot; + actualResponseCode    +
+   &quot;\n\n-------------------------- Response msg --------------------------\n&quot; +
+        &quot;Exp: &quot; + expectedResponseMsg + &quot;, Actual: &quot;  + actualResponseMsg     +
+   &quot;\n\n-------------------------- Response data -------------------------\n&quot; +
+        &quot;Exp: &quot; + Parameters          + &quot;\n\nActual: &quot; + actualResponseData  +
+   &quot;\n\n-------------------------- Response data diff --------------------\n&quot; +
+         vars.get(&quot;EXPECTED_RESP_DATA_DIFF&quot;)
+    } else {
+	    FailureMessage = &quot;&quot;
+	}
+    status ? vars.put(&quot;TESTSTATUS&quot;, &quot;PASS&quot;)        : vars.put(&quot;TESTSTATUS&quot;, &quot;FAIL&quot;)
+    status ? AssertionResult.setFailure(false)     : AssertionResult.setFailure(true)
+    status ? AssertionResult.setFailureMessage(FailureMessage) : AssertionResult.setFailureMessage(FailureMessage)
+}
+
+val = (RESPONSE_CODE_MSG_MATCH &amp;&amp; RESPONSE_DATA_MATCH) ? testStatus(true) : testStatus(false)
+vars.put(&quot;EXPECTED_RESPONSE_DATA&quot;, Parameters)</stringProp>
+            </JSR223Assertion>
+            <hashTree/>
+            <JSR223Listener guiclass="TestBeanGUI" testclass="JSR223Listener" testname="JSR223 Listener v2" enabled="true">
+              <stringProp name="TestPlan.comments">removed comented Code from v1</stringProp>
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters">${__threadNum}</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">/* ========================================================================= */
+/* BELOW CODE IS FOR: CREATING EXTENT REPORT                                 */
+/* ========================================================================= */
+// import &quot;extent report&quot; related libraries
+import com.aventstack.extentreports.*;
+import com.aventstack.extentreports.reporter.*;
+import com.aventstack.extentreports.markuputils.*;
+import com.aventstack.extentreports.model.Test
+import java.util.List;
+
+/* ========================================================================= */
+/*                            SET VARIABLES HERE                             */
+/* ========================================================================= */
+ExtentHtmlReporter htmlReporter; //
+ExtentReports      extent;       //
+ExtentTest         testReport;   //
+String             text          //contains string to be printed in report
+
+//firstTime flag is used create report only once and append future values to it
+String firstTime    = props.get(&quot;firstTimeFlag&quot;);
+
+//reportsPath variable holds the location set in config file defined by user
+//save the report in the said location
+String reportsPath = vars.get(&quot;FRAMEWORK_PATH&quot;) + vars.get(&quot;TEST_REPORTS_LOCATION&quot;);
+String reportFile  = reportsPath + &quot;/ApiTestResults.html&quot;;
+
+log.info(&quot;JSR223 Listener, firstTime flag  : &quot; + firstTime );
+log.info(&quot;JSR223 Listener, reports Path    : &quot; + reportsPath );
+log.info(&quot;JSR223 Listener, report File Name: &quot; + reportFile );
+
+String stepNumber  = vars.get(&quot;STEPNUMBER&quot;)
+
+/* ========================================================================= */
+/*  1. If firstTime(report file is being created for first time)             */
+/*     A. then create report in specified report location                    */
+/*     B. set title, report name and append = true, to append next test      */
+/*         results into file                                                 */
+/*     C. export it as object to be accessed for writing next test results   */
+/*  2. else:                                                                 */
+/*     A. Get the report objects                                             */
+/* ========================================================================= */
+if ( firstTime == null ) {
+    htmlReporter = new ExtentHtmlReporter(reportFile);
+    htmlReporter.config().setDocumentTitle(vars.get(&quot;testReportTitle&quot;));
+    htmlReporter.config().setReportName(vars.get(&quot;testReportName&quot;));
+    htmlReporter.setAppendExisting(true);
+
+    extent = new ExtentReports();
+    extent.attachReporter(htmlReporter);
+    
+    props.put(&quot;htmlReporterObj&quot;, htmlReporter);
+    props.put(&quot;extentObj&quot;, extent);
+    props.put(&quot;firstTimeFlag&quot;, &quot;false&quot;);
+} else {
+    htmlReporter = props.get(&quot;htmlReporterObj&quot;);
+    extent       = props.get(&quot;extentObj&quot;);
+}
+
+/* ========================================================================= */
+/* for each test step &quot;1&quot;, we create extent test, and for next steps append  */
+/* ========================================================================= */
+
+//def threadNum = ctx.getThreadNum()
+def threadNum = args[0]
+def category  = vars.get(&quot;testCaseName_&quot; + threadNum)
+    
+if (Integer.parseInt(stepNumber) == 1 ) {
+    String currentTestCase     = vars.get(&quot;TC_NUMBER&quot;);
+    String testCaseDescription = vars.get(&quot;TEST_DESC&quot;)
+    testReport = extent.createTest(currentTestCase, testCaseDescription);
+
+    testReport.assignCategory(category)
+    testReport.assignCategory(vars.get(&quot;PRIORITY&quot;))
+    
+    vars.putObject(&quot;testReportObj&quot;, testReport);
+} else {
+    String currentTestCase     = vars.get(&quot;TC_NUMBER&quot;);
+    testReport                 = vars.getObject(&quot;testReportObj&quot;);
+
+}
+
+/* ========================================================================= */
+/*                        write results to report file                       */
+/* ========================================================================= */
+String result = vars.get(&quot;TESTSTATUS&quot;)
+//text = &quot;Test Label       - &quot; +  vars.get(&quot;LABEL&quot;)                 + &quot;\n&quot;
+//text += &quot;STEP &quot; + stepNumber + &quot;           - &quot; + result           + &quot;\n&quot;
+text  =  vars.get(&quot;LABEL&quot;)   +  &quot;  -  &quot;  +   result               + &quot;\n&quot;
+text += &quot;ResponseTime(ms) - &quot;      +  sampleResult.getTime()      + &quot;\n&quot;
+text += &quot;=================== REQUEST DETAILS ===================&quot; + &quot;\n&quot;
+text += &quot;Request       : &quot; + sampleResult.getSamplerData()        + &quot;\n&quot;
+text += &quot;Request header: &quot; + sampleResult.getRequestHeaders()     + &quot;\n&quot;
+text += &quot;=======================================================&quot; + &quot;\n&quot;
+text += &quot;============== EXPECTED RESPONSE DETAILS ==============&quot; + &quot;\n&quot;
+text += &quot;Exp rsp code  : &quot;  +   vars.get(&quot;EXPECTED_RESPONSE_CODE&quot;)    + &quot;\n&quot;
+text += &quot;Exp rsp msg   : &quot;  +   vars.get(&quot;EXPECTED_RESPONSE_MESSAGE&quot;)     + &quot;\n&quot;
+text += &quot;Exp rsp data  : &quot;  +   vars.get(&quot;EXPECTED_RESPONSE_DATA&quot;)    + &quot;\n&quot;
+text += &quot;=======================================================&quot; + &quot;\n&quot;
+text += &quot;=============== ACTUAL RESPONSE DETAILS ===============&quot; + &quot;\n&quot;
+text += &quot;Actual rsp header: &quot; + sampleResult.getResponseHeaders() + &quot;\n&quot;
+text += &quot;Actual rsp code  : &quot; + sampleResult.getResponseCode()    + &quot;\n&quot;
+text += &quot;Actual rsp msg   : &quot; + sampleResult.getResponseMessage() + &quot;\n&quot;
+text += &quot;Actual rsp data  : &quot; + 
+                           sampleResult.getResponseDataAsString() + &quot;\n&quot;
+text += &quot;=======================================================&quot; + &quot;\n&quot;
+text += &quot;=============== EXPECTED vs ACTUAL ====================&quot; + &quot;\n&quot;
+text += &quot;rsp data diff: &quot; + vars.get(&quot;EXPECTED_RESP_DATA_DIFF&quot;)   + &quot;\n&quot;
+text += &quot;=======================================================&quot;
+
+//childTest      = testReport.createNode(text);
+//grandchildTest = childTest.createNode(&quot;STEP EXECUTION DETAILS&quot;);
+
+Markup m = MarkupHelper.createCodeBlock(text)
+result.equals(&quot;PASS&quot;) ?  testReport.pass(m) : testReport.fail(m);
+//Markup mC = MarkupHelper.createCodeBlock(text1)
+
+//result.equals(&quot;PASS&quot;) ?  testReport.pass(text) : testReport.fail(text + text1);
+//result.equals(&quot;PASS&quot;) ?  childTest.pass(mp) : childTest.fail(mp);
+//result.equals(&quot;PASS&quot;) ?  grandchildTest.pass(mC)  : grandchildTest.fail(mC);
+//if (result.equals(&quot;PASS&quot;)) {
+//	childTest = testReport.createNode(text);
+//	Markup m = MarkupHelper.createCodeBlock(text1)
+//	childTest.pass(m)
+//	Markup m = MarkupHelper.createCodeBlock(text)
+//     testReport.pass(m)
+//} else {
+//	childTest = testReport.createNode(text);
+//	Markup m = MarkupHelper.createCodeBlock(text1)
+//	childTest.fail(m)
+//    Markup m = MarkupHelper.createCodeBlock(text + text1)
+//    testReport.fail(m)
+//}
+
+extent.flush();</stringProp>
+            </JSR223Listener>
+            <hashTree/>
+            <ResultSaver guiclass="ResultSaverGui" testclass="ResultSaver" testname="Save Responses to a file" enabled="true">
+              <stringProp name="FileSaver.filename">${FRAMEWORK_PATH}/${TEST_REPORTS_LOCATION}/response-${__eval(${LABEL})}-run</stringProp>
+              <boolProp name="FileSaver.errorsonly">false</boolProp>
+              <boolProp name="FileSaver.skipautonumber">true</boolProp>
+              <boolProp name="FileSaver.skipsuffix">false</boolProp>
+              <boolProp name="FileSaver.successonly">false</boolProp>
+            </ResultSaver>
+            <hashTree/>
+          </hashTree>
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
+            <stringProp name="IfController.condition">&quot;${USER_METHOD}&quot;.length() &gt; 0</stringProp>
+            <boolProp name="IfController.evaluateAll">false</boolProp>
+          </IfController>
+          <hashTree>
+            <SystemSampler guiclass="SystemSamplerGui" testclass="SystemSampler" testname="User Method-Run JS tests-${TC_NUMBER}" enabled="true">
+              <boolProp name="SystemSampler.checkReturnCode">false</boolProp>
+              <stringProp name="SystemSampler.expectedReturnCode">0</stringProp>
+              <stringProp name="SystemSampler.command">${USER_BATCH_FILE}</stringProp>
+              <elementProp name="SystemSampler.arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="Argument">
+                    <stringProp name="Argument.name"></stringProp>
+                    <stringProp name="Argument.value">${USER_METHOD}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                  <elementProp name="" elementType="Argument">
+                    <stringProp name="Argument.name"></stringProp>
+                    <stringProp name="Argument.value">response-${__eval(${LABEL})}-run</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <elementProp name="SystemSampler.environment" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                <collectionProp name="Arguments.arguments"/>
+              </elementProp>
+              <stringProp name="SystemSampler.directory">${WORKING_DIRECTORY}</stringProp>
+              <stringProp name="TestPlan.comments">Execute user bacth file from WORKING_DIRECTORY</stringProp>
+            </SystemSampler>
+            <hashTree>
+              <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="false">
+                <stringProp name="ConstantTimer.delay">3000</stringProp>
+              </ConstantTimer>
+              <hashTree/>
+              <JSR223Timer guiclass="TestBeanGUI" testclass="JSR223Timer" testname="JSR223 Timer" enabled="true">
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="script">def sleepTimer = vars.get(&quot;WAIT_TIME_SEC&quot;)
+sleepTimer     = (sleepTimer.length() &gt; 0) ? (sleepTimer.toInteger() * 1000) : (1 * 100)
+log.info(&quot;Pausing execution for : &quot; + sleepTimer + &quot; milli-sec&quot;)
+return sleepTimer</stringProp>
+                <stringProp name="scriptLanguage">groovy</stringProp>
+              </JSR223Timer>
+              <hashTree/>
+              <JSR223Assertion guiclass="TestBeanGUI" testclass="JSR223Assertion" testname="JSR223 Assertion Get Run time values" enabled="true">
+                <stringProp name="scriptLanguage">groovy</stringProp>
+                <stringProp name="parameters">${__FileToString(${downloadPath}\apiRunTimeValues.json,,)}</stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="cacheKey">false</stringProp>
+                <stringProp name="script">import groovy.json.JsonSlurper
+import org.skyscreamer.jsonassert.JSONCompare
+import org.skyscreamer.jsonassert.JSONCompareResult
+import org.skyscreamer.jsonassert.JSONCompareMode
+
+log.info(&quot;Parameters: &quot; + Parameters)
+
+runTimeData = Parameters.replaceAll(&quot;[\r\n]+&quot;,&quot;&quot;)
+runTimeData = new JsonSlurper().parseText(runTimeData)
+log.info(&quot;unformatted values &quot; + runTimeData);
+String reportName= &quot;response-&quot; + vars.get(&quot;LABEL&quot;) + &quot;-run&quot;
+//  get each value
+	   vars.put(&quot;TESTSTATUS&quot;, &quot;SKIP&quot;)
+runTimeData.each { 
+	   log.info(&quot;run time values &quot; + it )
+	   def paramNameValue    = it.toString().split(&quot;=&quot;)
+	   log.info(&quot;Run time Parameter:&quot; +paramNameValue[0] )
+        log.info(&quot;Run time Value:&quot; + paramNameValue[1] )
+
+        vars.put(paramNameValue[0],  paramNameValue[1])
+        log.info(&quot;Stored Value:&quot; + vars.get(paramNameValue[0]) )
+	// fail the test if any message is added for the report
+         if (paramNameValue[0].equals(reportName)) {
+	       log.info(&quot;Report name of Run time Parameter:&quot; +paramNameValue[0] )
+	   	  log.info(&quot;Test validation status:&quot; +paramNameValue[1] )
+	            if (paramNameValue[1].equals(&quot;PASS&quot;)) {
+	            			vars.put(&quot;TESTSTATUS&quot;, &quot;PASS&quot;)
+	            		   	AssertionResult.setFailure(false)
+	   					AssertionResult.setFailureMessage(&quot;User method validation passed&quot;)
+	            } else {
+	   					vars.put(&quot;TESTSTATUS&quot;, &quot;FAIL&quot;)
+	   					AssertionResult.setFailure(true)
+	   					AssertionResult.setFailureMessage(&quot;User method validation failed: &quot; + paramNameValue[1])
+	            }
+
+         }
+ 
+        
+}
+
+</stringProp>
+              </JSR223Assertion>
+              <hashTree/>
+              <JSR223Listener guiclass="TestBeanGUI" testclass="JSR223Listener" testname="JSR223 Listener v2" enabled="true">
+                <stringProp name="TestPlan.comments">removed comented Code from v1</stringProp>
+                <stringProp name="scriptLanguage">groovy</stringProp>
+                <stringProp name="parameters">${__threadNum}</stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="script">/* ========================================================================= */
+/* BELOW CODE IS FOR: CREATING EXTENT REPORT                                 */
+/* ========================================================================= */
+// import &quot;extent report&quot; related libraries
+import com.aventstack.extentreports.*;
+import com.aventstack.extentreports.reporter.*;
+import com.aventstack.extentreports.markuputils.*;
+import com.aventstack.extentreports.model.Test
+import java.util.List;
+
+String validationResult = vars.get(&quot;TESTSTATUS&quot;)
+ if (validationResult.equals(&quot;SKIP&quot;)) {
+ 	//no actions if skip
+ 	log.info(&quot;skipping the test result&quot;)
+ } else {
+ 	
+/* ========================================================================= */
+/*                            SET VARIABLES HERE                             */
+/* ========================================================================= */
+ExtentHtmlReporter htmlReporter; //
+ExtentReports      extent;       //
+ExtentTest         testReport;   //
+String             text          //contains string to be printed in report
+
+//firstTime flag is used create report only once and append future values to it
+String firstTime    = props.get(&quot;firstTimeFlag&quot;);
+
+//reportsPath variable holds the location set in config file defined by user
+//save the report in the said location
+String reportsPath = vars.get(&quot;FRAMEWORK_PATH&quot;) + vars.get(&quot;TEST_REPORTS_LOCATION&quot;);
+//String reportFile  = reportsPath + &quot;/Validations&quot; + props.get(&quot;testStartTime&quot;) + &quot;.html&quot;;
+String reportFile  = reportsPath + &quot;/ApiTestResults.html&quot;;
+
+log.info(&quot;JSR223 Listener, firstTime flag  : &quot; + firstTime );
+log.info(&quot;JSR223 Listener, reports Path    : &quot; + reportsPath );
+log.info(&quot;JSR223 Listener, report File Name: &quot; + reportFile );
+
+String stepNumber  = vars.get(&quot;STEPNUMBER&quot;)
+
+/* ========================================================================= */
+/*  1. If firstTime(report file is being created for first time)             */
+/*     A. then create report in specified report location                    */
+/*     B. set title, report name and append = true, to append next test      */
+/*         results into file                                                 */
+/*     C. export it as object to be accessed for writing next test results   */
+/*  2. else:                                                                 */
+/*     A. Get the report objects                                             */
+/* ========================================================================= */
+if ( firstTime == null ) {
+    htmlReporter = new ExtentHtmlReporter(reportFile);
+    htmlReporter.config().setDocumentTitle(vars.get(&quot;testReportTitle&quot;));
+    htmlReporter.config().setReportName(vars.get(&quot;testReportName&quot;));
+    htmlReporter.setAppendExisting(true);
+
+    extent = new ExtentReports();
+    extent.attachReporter(htmlReporter);
+    
+    props.put(&quot;htmlReporterObj&quot;, htmlReporter);
+    props.put(&quot;extentObj&quot;, extent);
+    props.put(&quot;firstTimeFlag&quot;, &quot;false&quot;);
+} else {
+    htmlReporter = props.get(&quot;htmlReporterObj&quot;);
+    extent       = props.get(&quot;extentObj&quot;);
+}
+
+/* ========================================================================= */
+/* for each test step &quot;1&quot;, we create extent test, and for next steps append  */
+/* ========================================================================= */
+
+//def threadNum = ctx.getThreadNum()
+def threadNum = args[0]
+def category  = vars.get(&quot;testCaseName_&quot; + threadNum)
+    
+//if (Integer.parseInt(stepNumber) == 1 ) {
+//    String currentTestCase     = vars.get(&quot;TC_NUMBER&quot;);
+//    String testCaseDescription = vars.get(&quot;TEST_DESC&quot;)
+//    testReport = extent.createTest(currentTestCase, testCaseDescription);
+//
+//    testReport.assignCategory(category)
+//    testReport.assignCategory(vars.get(&quot;PRIORITY&quot;))
+//    
+//    vars.putObject(&quot;testReportObj&quot;, testReport);
+//} else {
+    String currentTestCase     = vars.get(&quot;TC_NUMBER&quot;);
+    testReport                 = vars.getObject(&quot;testReportObj&quot;);
+
+//}
+
+/* ========================================================================= */
+/*                        write results to report file                       */
+/* ========================================================================= */
+String result = vars.get(&quot;TESTSTATUS&quot;)
+text  =  &quot;Additional Validations  -  &quot;  +   result               + &quot;\n&quot;
+text += &quot;User Method       : &quot; + sampleResult.getSamplerData()        + &quot;\n&quot;
+text += &quot;Output  : &quot; + sampleResult.getResponseDataAsString() + &quot;\n&quot;
+
+
+Markup m = MarkupHelper.createCodeBlock(text)
+result.equals(&quot;PASS&quot;) ?  testReport.pass(m) : testReport.fail(m);
+
+
+extent.flush();
+
+ }
+ </stringProp>
+              </JSR223Listener>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="CSV Aggregate Report" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>false</latency>
+                <timestamp>false</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>false</threadName>
+                <dataType>false</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>true</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <url>true</url>
+                <fileName>true</fileName>
+              </value>
+            </objProp>
+            <stringProp name="filename">${FRAMEWORK_PATH}results/ApiTestResults.csv</stringProp>
+          </ResultCollector>
+          <hashTree/>
+          <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="XML Aggregate Report" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>false</latency>
+                <timestamp>false</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>false</threadName>
+                <dataType>false</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>true</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>true</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <url>true</url>
+                <fileName>true</fileName>
+              </value>
+            </objProp>
+            <stringProp name="filename">${FRAMEWORK_PATH}results/ApiTestResults.xml</stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <kg.apc.jmeter.config.VariablesFromCSV guiclass="kg.apc.jmeter.config.VariablesFromCSVGui" testclass="kg.apc.jmeter.config.VariablesFromCSV" testname="jp@gc - Variables From CSV File" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+        <stringProp name="filename">C:\JMeter_API_Framework\config\config.txt</stringProp>
+        <stringProp name="variablesPrefix"></stringProp>
+        <stringProp name="delimiter">=</stringProp>
+        <intProp name="skipLines">0</intProp>
+        <boolProp name="storeSysProp">false</boolProp>
+        <stringProp name="TestPlan.comments">CREATE TABLE IF NOT EXISTS ${tableName} 
+( &apos;TC_NUMBER&apos; , &apos;STEPNUMBER&apos; , &apos;PRIORITY&apos; , &apos;LABEL&apos; , &apos;PROTOCOL&apos; , &apos;METHOD&apos; , &apos;API_URL&apos; , &apos;API_RESOUCES&apos; , 
+&apos;API_DATA&apos; , &apos;HEADER&apos; , &apos;EXPECTED_RESPONSE_CODE&apos; , &apos;EXPECTED_RESPONSE_MESSAGE&apos; , &apos;EXPECTED_RESPONSE_DATA&apos; , 
+&apos;REPONSE_VALUE_EXTRACTION&apos; , &apos;EXTRACTED_VALUE&apos; , &apos;GATEWAY_IP&apos; , &apos;GATEWAY_PORT&apos; , &apos;WAIT_TIME_SEC&apos;,&apos;USER_METHOD&apos; );
+</stringProp>
+      </kg.apc.jmeter.config.VariablesFromCSV>
+      <hashTree/>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="Accept-Language" elementType="Header">
+            <stringProp name="Header.name">Accept-Language</stringProp>
+            <stringProp name="Header.value">da,fr, de </stringProp>
+          </elementProp>
+          <elementProp name="Accept-Encoding" elementType="Header">
+            <stringProp name="Header.name">Accept-Encoding</stringProp>
+            <stringProp name="Header.value">gzip, deflate, br</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Authorization</stringProp>
+            <stringProp name="Header.value">Bearer ${TOKEN}</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+      <SetupThreadGroup guiclass="SetupThreadGroupGui" testclass="SetupThreadGroup" testname="setUp Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1523440459000</longProp>
+        <longProp name="ThreadGroup.end_time">1523440459000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </SetupThreadGroup>
+      <hashTree>
+        <OnceOnlyController guiclass="OnceOnlyControllerGui" testclass="OnceOnlyController" testname="Once Only Controller" enabled="true"/>
+        <hashTree>
+          <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="set sqlitePath" enabled="true">
+            <stringProp name="TestPlan.comments">1. set sqlite binary based on OS and arch
+2. set location of db file
+3. delete db file if exists</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters">${__time(HH&apos;h&apos;mm&apos;m&apos;-ddMMyyyy)}</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">import groovy.io.FileType
+
+props.put(&quot;testStartTime&quot;, args[0])
+def sqliteFilePath     = &quot;&quot;                        // variable to save sqlite executable path
+def testCaseDbFilePath = &quot;&quot;                        // variable to save db which stores test cases
+//def osType             = &quot;Linux&quot;              // get os installed 
+//def osArch             = &quot;amd64&quot;              // get the os architecture 
+def osType             = &quot;${__property(os.name)}&quot;              // get os installed 
+def osArch             = &quot;${__property(os.arch)}&quot;              // get the os architecture 
+log.info(&quot;\&quot;${__TestPlanName}\&quot;, is executed on OS: \&quot;&quot; + osType + &quot;\&quot;, machine type: \&quot;&quot; + osArch + &quot;\&quot;&quot;)
+
+def checkFileExists(filePath) {
+    if (new File(filePath).exists()) {
+    	log.info(&quot;File exists in location specified : &quot; + filePath)
+    	return 1
+    } else {
+    	log.info(&quot;no file exists in location specified : &quot; + filePath)
+    	return 0
+    }
+}
+
+if(osType.contains(&quot;Linux&quot;)) { // if os is linux
+    def sqliteBin  = &quot;sqlite3&quot;  // linux version of sqlite executable
+
+    // set sqlite binary based on linux architecture is 64 bit os or 32 bit os
+    def sqlite64Bit        = vars.get(&quot;BINARIES&quot;) + &quot;/&quot; + &quot;sqllite/linux-x86_64&quot; + &quot;/&quot; + sqliteBin
+    def sqlite32Bit        = vars.get(&quot;BINARIES&quot;) + &quot;/&quot; + &quot;sqllite/linux-x86&quot;    + &quot;/&quot; + sqliteBin
+    // get 32 or 64 bit sqlite executable
+    sqliteFilePath = osArch.contains(&quot;64&quot;) ? sqlite64Bit : sqlite32Bit
+    
+    // check if file specified in the path is present if not use the default sqlite binaries located in framework
+    if (checkFileExists(sqliteFilePath)) {
+        log.info(&quot;sqlite executable path : &quot; + sqliteFilePath)
+    } else {
+    	   log.info(&quot;taking sqlite binary located in framework...&quot;)
+    	   // set sqlite binary based on linux architecture is 64 bit os or 32 bit os
+    	   sqlite64Bit    = vars.get(&quot;FRAMEWORK_PATH&quot;) + vars.get(&quot;BINARIES&quot;) + &quot;/&quot; + &quot;sqllite/linux-x86_64&quot; + &quot;/&quot; + sqliteBin
+    	   sqlite32Bit    = vars.get(&quot;FRAMEWORK_PATH&quot;) + vars.get(&quot;BINARIES&quot;) + &quot;/&quot; + &quot;sqllite/linux-x86&quot; + &quot;/&quot; + sqliteBin
+    	   // get 32 or 64 bit sqlite executable
+        sqliteFilePath = osArch.contains(&quot;64&quot;) ? sqlite64Bit : sqlite32Bit
+        // check if file is present in default framework path, else exit or stop testing
+        if (checkFileExists(sqliteFilePath)) {
+            log.info(&quot;sqlite executable path: &quot; + sqliteFilePath)
+        } else {
+            log.info(&quot;unable to get path of sqlite executable, please check if \&quot;BINARIES\&quot; in config file is set properly&quot;)
+	       ctx.getEngine().askThreadsToStop()  // stop jmeter
+        }
+    }
+} else if (osType.contains(&quot;Windows&quot;)) { // if os is windows
+    def sqliteBin = &quot;sqlite3.exe&quot;        // windows version of sqlite executable
+    // check if file specified in the path is present if not use the default sqlite binaries located in framework
+    def winSqliteBinDirectory = vars.get(&quot;BINARIES&quot;) + &quot;/&quot; + &quot;sqllite/win&quot; + &quot;/&quot; + sqliteBin
+    def winSqliteDefault      = vars.get(&quot;FRAMEWORK_PATH&quot;) + vars.get(&quot;BINARIES&quot;) + &quot;/&quot; + &quot;sqllite/win&quot; + &quot;/&quot; + sqliteBin
+    sqliteFilePath            = checkFileExists(winSqliteBinDirectory) ? winSqliteBinDirectory : checkFileExists(winSqliteDefault) ? winSqliteDefault 
+	log.info(sqliteFilePath);
+: 0
+    log.info(&quot;sqlite executable path: &quot; + sqliteFilePath);
+} else {
+	log.info(&quot;OS unsupported, add OS support in script&quot;);
+	ctx.getEngine().askThreadsToStop();
+}
+
+if (checkFileExists(&quot;sqlite3&quot;)) {
+	vars.put(&quot;sqliteExecutable&quot;, &quot;sqlite3&quot;)
+} else {
+	vars.put(&quot;sqliteExecutable&quot;, sqliteFilePath)	
+}
+
+//File tempDbFile = new File(vars.get(&quot;tmpDbFileName&quot;))
+def tempDbFile = new File(vars.get(&quot;tmpDbFileName&quot;))
+log.info(&quot;Full path of database file: &quot; + vars.get(&quot;tmpDbFileName&quot;)) 
+
+if (tempDbFile.exists()) {
+    log.info(&quot;db file exists thus deleting...&quot;)
+    if (tempDbFile.delete()) {
+        log.info(&quot;Successfully Deleted file: &quot; + tempDbFile) 
+    } else {
+        log.info(&quot;unable to delete file: &quot; + tempDbFile)
+         ctx.getEngine().askThreadsToStop();
+    }
+} else {
+   log.info(&quot;no db file exists&quot;)
+}
+
+props.remove(&quot;htmlReporterObj&quot;)
+props.remove(&quot;extentObj&quot;)
+props.remove(&quot;firstTimeFlag&quot;)
+SampleResult.setIgnore()</stringProp>
+          </JSR223Sampler>
+          <hashTree/>
+        </hashTree>
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
+          <stringProp name="IfController.condition">&quot;${TEST_FILE_EXECUTE}&quot;.length() == 0</stringProp>
+          <boolProp name="IfController.evaluateAll">false</boolProp>
+        </IfController>
+        <hashTree>
+          <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="true">
+            <stringProp name="CounterConfig.start">1</stringProp>
+            <stringProp name="CounterConfig.end"></stringProp>
+            <stringProp name="CounterConfig.incr">1</stringProp>
+            <stringProp name="CounterConfig.name">loopCounter</stringProp>
+            <stringProp name="CounterConfig.format"></stringProp>
+            <boolProp name="CounterConfig.per_user">false</boolProp>
+          </CounterConfig>
+          <hashTree/>
+          <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="setFilePathsAndThreads" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">def fileName = &quot;&quot;
+def match    = vars.get(&quot;testCaseFileName&quot;) =~ /^\/(.+?)$/
+if (match) {
+    fileName = match[0][1]
+} else {
+    fileName = vars.get(&quot;testCaseFileName&quot;)
+}
+log.info(&quot;absoulute file path and name: &quot; + fileName)
+
+def tableName = (fileName =~ /(.+?)\./)
+log.info(&quot;Name of table to be created: &lt;&quot; + tableName[0][1] + &quot;&gt;&quot;  )
+
+absFileName = vars.get(&quot;FRAMEWORK_PATH&quot;) +  vars.get(&quot;TEST_CASE_LOCATION&quot;) + fileName
+log.info(&quot;File path of test cases: &quot; + absFileName)
+
+vars.put(&quot;tableName&quot;, tableName[0][1])
+vars.put(&quot;absFilePathTestCase&quot;,  absFileName)
+${__setProperty(numThreads, ${loopCounter}, )}</stringProp>
+          </JSR223Sampler>
+          <hashTree>
+            <com.blazemeter.jmeter.DirectoryListingConfig guiclass="com.blazemeter.jmeter.DirectoryListingConfigGui" testclass="com.blazemeter.jmeter.DirectoryListingConfig" testname="getFilesInDirectory" enabled="true">
+              <stringProp name="directory">${FRAMEWORK_PATH}${TEST_CASE_LOCATION}</stringProp>
+              <stringProp name="variableName">testCaseFileName</stringProp>
+              <boolProp name="useFullPath">false</boolProp>
+              <boolProp name="randomOrder">false</boolProp>
+              <boolProp name="recursiveListing">false</boolProp>
+              <boolProp name="rewindOnTheEndOfList">false</boolProp>
+              <boolProp name="reReadDirectory">false</boolProp>
+              <boolProp name="independentListPerThread">false</boolProp>
+            </com.blazemeter.jmeter.DirectoryListingConfig>
+            <hashTree/>
+          </hashTree>
+          <SystemSampler guiclass="SystemSamplerGui" testclass="SystemSampler" testname="createDbAndTable" enabled="true">
+            <stringProp name="TestPlan.comments">to create testCases.db using sqllite exe from csv file</stringProp>
+            <boolProp name="SystemSampler.checkReturnCode">false</boolProp>
+            <stringProp name="SystemSampler.expectedReturnCode">0</stringProp>
+            <stringProp name="SystemSampler.command">${sqliteExecutable}</stringProp>
+            <elementProp name="SystemSampler.arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="Argument">
+                  <stringProp name="Argument.name"></stringProp>
+                  <stringProp name="Argument.value">${tmpDbFileName}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Argument">
+                  <stringProp name="Argument.name"></stringProp>
+                  <stringProp name="Argument.value">.separator ,</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Argument">
+                  <stringProp name="Argument.name"></stringProp>
+                  <stringProp name="Argument.value">.import ${absFilePathTestCase} ${tableName}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Argument">
+                  <stringProp name="Argument.name"></stringProp>
+                  <stringProp name="Argument.value">.tables</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <elementProp name="SystemSampler.environment" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="SystemSampler.directory"></stringProp>
+          </SystemSampler>
+          <hashTree>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">5000</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="else Controller" enabled="true">
+          <stringProp name="IfController.condition">&quot;${TEST_FILE_EXECUTE}&quot;.length() &gt; 0</stringProp>
+          <boolProp name="IfController.evaluateAll">false</boolProp>
+        </IfController>
+        <hashTree>
+          <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="setFilePathsAndThreads" enabled="true">
+            <stringProp name="TestPlan.comments">1. Set number of test cases to be executed
+2. set table names to be created in db
+3. set number of threads to be created
+//${__setProperty(numThreads, numTestFileToExecute, )}</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">def testFilesToExecute  = vars.get(&quot;TEST_FILE_EXECUTE&quot;).split(&quot;,&quot;) as String[]
+def numTestFiles        = testFilesToExecute.length
+//log.info(&quot;number of test case files to be executed: &quot; + numTestFiles)
+vars.put(&quot;numTestFiles&quot;, Integer.toString(numTestFiles))
+
+for (def i = 0; i &lt; numTestFiles; i++) {
+    log.info(&quot;Creating table name for test case: &quot; + testFilesToExecute[i])
+    //testFilesToExecute[i].split(&quot;[.]&quot;)[0];
+    def fileName  = (testFilesToExecute[i] =~ /(.+?)\./)[0][1]
+    def table     = &quot;tableName_&quot; + (i + 1)
+    vars.put(table, fileName)
+    log.info(&quot;Table name for test case is: &quot; + fileName)
+    
+    def files     = &quot;absFilePathTestCase_&quot; + (i + 1)
+    def filePath  = vars.get(&quot;FRAMEWORK_PATH&quot;) + vars.get(&quot;TEST_CASE_LOCATION&quot;) + &quot;/&quot; + testFilesToExecute[i]
+    filePath      = filePath.replace(&quot;\\&quot;, &quot;/&quot;)
+    vars.put(files, filePath)
+    log.info(&quot;File path of test case: &quot; + filePath)
+}
+
+props.put(&quot;numThreads&quot;, Integer.toString(numTestFiles))</stringProp>
+          </JSR223Sampler>
+          <hashTree/>
+          <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="ForEachFileSpecifiedInConfigFile" enabled="true">
+            <stringProp name="ForeachController.inputVal">absFilePathTestCase</stringProp>
+            <stringProp name="ForeachController.returnVal">absFilePathTestCase</stringProp>
+            <boolProp name="ForeachController.useSeparator">true</boolProp>
+            <stringProp name="ForeachController.startIndex">0</stringProp>
+            <stringProp name="TestPlan.comments">loop through each test case file specified in config file</stringProp>
+          </ForeachController>
+          <hashTree>
+            <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="true">
+              <stringProp name="CounterConfig.start">1</stringProp>
+              <stringProp name="CounterConfig.end"></stringProp>
+              <stringProp name="CounterConfig.incr">1</stringProp>
+              <stringProp name="CounterConfig.name">counter</stringProp>
+              <stringProp name="CounterConfig.format"></stringProp>
+              <boolProp name="CounterConfig.per_user">false</boolProp>
+              <stringProp name="TestPlan.comments">increatement counter, needed for table name</stringProp>
+            </CounterConfig>
+            <hashTree/>
+            <SystemSampler guiclass="SystemSamplerGui" testclass="SystemSampler" testname="createDbAndTable" enabled="true">
+              <stringProp name="TestPlan.comments">to create testCases.db using sqllite exe from csv file</stringProp>
+              <boolProp name="SystemSampler.checkReturnCode">false</boolProp>
+              <stringProp name="SystemSampler.expectedReturnCode">0</stringProp>
+              <stringProp name="SystemSampler.command">${sqliteExecutable}</stringProp>
+              <elementProp name="SystemSampler.arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="Argument">
+                    <stringProp name="Argument.name"></stringProp>
+                    <stringProp name="Argument.value">${tmpDbFileName}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                  <elementProp name="" elementType="Argument">
+                    <stringProp name="Argument.name"></stringProp>
+                    <stringProp name="Argument.value">.separator ,</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                  <elementProp name="" elementType="Argument">
+                    <stringProp name="Argument.name"></stringProp>
+                    <stringProp name="Argument.value">.import ${absFilePathTestCase} ${__V(tableName_${counter})}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                  <elementProp name="" elementType="Argument">
+                    <stringProp name="Argument.name"></stringProp>
+                    <stringProp name="Argument.value">.tables</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <elementProp name="SystemSampler.environment" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                <collectionProp name="Arguments.arguments"/>
+              </elementProp>
+              <stringProp name="SystemSampler.directory"></stringProp>
+            </SystemSampler>
+            <hashTree>
+              <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+                <stringProp name="ConstantTimer.delay">2000</stringProp>
+              </ConstantTimer>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Test Action" enabled="true">
+            <intProp name="ActionProcessor.action">0</intProp>
+            <intProp name="ActionProcessor.target">0</intProp>
+            <stringProp name="ActionProcessor.duration">0</stringProp>
+          </TestAction>
+          <hashTree/>
+        </hashTree>
+        <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="true">
+          <boolProp name="displayJMeterProperties">true</boolProp>
+          <boolProp name="displayJMeterVariables">true</boolProp>
+          <boolProp name="displaySystemProperties">true</boolProp>
+        </DebugSampler>
+        <hashTree/>
+      </hashTree>
+      <JDBCDataSource guiclass="TestBeanGUI" testclass="JDBCDataSource" testname="JDBC Connection Configuration" enabled="true">
+        <boolProp name="autocommit">false</boolProp>
+        <stringProp name="checkQuery">select 1</stringProp>
+        <stringProp name="connectionAge">5000</stringProp>
+        <stringProp name="dataSource">dataBase1</stringProp>
+        <stringProp name="dbUrl">jdbc:sqlite:${tmpDbFileName}</stringProp>
+        <stringProp name="driver">org.sqlite.JDBC</stringProp>
+        <boolProp name="keepAlive">true</boolProp>
+        <stringProp name="password"></stringProp>
+        <stringProp name="poolMax">0</stringProp>
+        <stringProp name="timeout">10000</stringProp>
+        <stringProp name="transactionIsolation">DEFAULT</stringProp>
+        <stringProp name="trimInterval">60000</stringProp>
+        <stringProp name="username"></stringProp>
+        <stringProp name="TestPlan.comments">using tmpDbFile testCases1.db</stringProp>
+        <boolProp name="preinit">false</boolProp>
+        <stringProp name="initQuery"></stringProp>
+        <stringProp name="connectionProperties"></stringProp>
+      </JDBCDataSource>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">${__property(numThreads)}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${__BeanShell(${__property(numThreads)}*${rampUpTime},)}</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <longProp name="ThreadGroup.start_time">1523265130000</longProp>
+        <longProp name="ThreadGroup.end_time">1523265130000</longProp>
+        <stringProp name="TestPlan.comments">displayJMeterProperties</stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="get number of test cases in database" enabled="true">
+          <stringProp name="dataSource">dataBase1</stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="query">SELECT name FROM sqlite_master WHERE type=&apos;table&apos;;</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="variableNames">testCaseName</stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
+          <stringProp name="IfController.condition">&quot;${EXECUTE_TEST_CASES}&quot;.length() &lt;= 0</stringProp>
+          <boolProp name="IfController.evaluateAll">false</boolProp>
+        </IfController>
+        <hashTree>
+          <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="getTestCaseDetails" enabled="true">
+            <stringProp name="dataSource">dataBase1</stringProp>
+            <stringProp name="queryType">Prepared Select Statement</stringProp>
+            <stringProp name="query">select * from ${__V(testCaseName_${__threadNum})} where LABEL is not null and LABEL != &apos;&apos;;</stringProp>
+            <stringProp name="queryArguments"></stringProp>
+            <stringProp name="queryArgumentsTypes"></stringProp>
+            <stringProp name="variableNames">TC_NUMBER,TEST_DESC,PRIORITY,STEPNUMBER,LABEL,PROTOCOL,METHOD,API_URL,API_RESOUCES,API_DATA,HEADER,EXPECTED_RESPONSE_CODE,EXPECTED_RESPONSE_MESSAGE,EXPECTED_RESPONSE_DATA,REPONSE_VALUE_EXTRACTION,EXTRACTED_VALUE,GATEWAY_IP,GATEWAY_PORT,WAIT_TIME_SEC,USER_METHOD</stringProp>
+            <stringProp name="resultVariable"></stringProp>
+            <stringProp name="queryTimeout"></stringProp>
+            <stringProp name="resultSetHandler">Store as String</stringProp>
+            <stringProp name="resultSetMaxRows"></stringProp>
+          </JDBCSampler>
+          <hashTree/>
+          <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller" enabled="true">
+            <collectionProp name="ModuleController.node_path">
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="136048680">apiTestingFrameWork</stringProp>
+              <stringProp name="170071582">Test Fragment</stringProp>
+            </collectionProp>
+          </ModuleController>
+          <hashTree/>
+        </hashTree>
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="elseIf Controller" enabled="true">
+          <stringProp name="IfController.condition">&quot;${EXECUTE_TEST_CASES}&quot;.length() &gt; 0</stringProp>
+          <boolProp name="IfController.evaluateAll">false</boolProp>
+        </IfController>
+        <hashTree>
+          <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="getTestCasesToExecute" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">/* ========================================================================= */
+/* BELOW CODE IS FOR                                                         */
+/* 1. getting specific test cases to execute                                 */
+/* ========================================================================= */
+// split test cases specified in config file
+def testCasesToExecute = vars.get(&quot;EXECUTE_TEST_CASES&quot;).split(&quot;,&quot;) as String[]
+def arrayLength        = testCasesToExecute.length   // number of test cases to execute
+
+// iterate test cases
+for ( def i = 0; i &lt; arrayLength; i++ ) {
+    log.info(&quot;Test cases to be executed: &quot; +  testCasesToExecute[i]);
+    if ( testCasesToExecute[i] =~ /TC-/ ) {	// seat updates: Use TC to identify test cases
+    	   vars.put(&quot;column&quot;, &quot;TC_NUMBER&quot;)
+    } else if ( testCasesToExecute[i] =~ /P[1-3]/) {
+    	   vars.put(&quot;column&quot;, &quot;PRIORITY&quot;)
+    } else {
+    	   log.info(&quot;Test cases type to be executed is not defined properly&quot;);
+    	   log.info(&quot;For valid values, check config file...&quot;);
+    	   log.info(&quot;Stopping test&quot;);
+    	   ctx.getEngine().askThreadsToStop();
+    }
+    def testCases = &quot;testCase_&quot; + (i + 1);
+    vars.put(testCases, testCasesToExecute[i]);
+}</stringProp>
+          </JSR223Sampler>
+          <hashTree/>
+          <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="ForEach Controller" enabled="true">
+            <stringProp name="ForeachController.inputVal">testCase</stringProp>
+            <stringProp name="ForeachController.returnVal">selectedTestCase</stringProp>
+            <boolProp name="ForeachController.useSeparator">true</boolProp>
+            <stringProp name="ForeachController.startIndex">0</stringProp>
+          </ForeachController>
+          <hashTree>
+            <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="getSpecificTestCaseDetails" enabled="true">
+              <stringProp name="dataSource">dataBase1</stringProp>
+              <stringProp name="queryType">Prepared Select Statement</stringProp>
+              <stringProp name="query">select * from ${__V(testCaseName_${__threadNum})} where LABEL is not null and LABEL != &apos;&apos; and ${column} = &apos;${selectedTestCase}&apos;;</stringProp>
+              <stringProp name="queryArguments"></stringProp>
+              <stringProp name="queryArgumentsTypes"></stringProp>
+              <stringProp name="variableNames">TC_NUMBER,TEST_DESC,PRIORITY,STEPNUMBER,LABEL,PROTOCOL,METHOD,API_URL,API_RESOUCES,API_DATA,HEADER,EXPECTED_RESPONSE_CODE,EXPECTED_RESPONSE_MESSAGE,EXPECTED_RESPONSE_DATA,REPONSE_VALUE_EXTRACTION,EXTRACTED_VALUE,GATEWAY_IP,GATEWAY_PORT,WAIT_TIME_SEC,USER_METHOD</stringProp>
+              <stringProp name="resultVariable"></stringProp>
+              <stringProp name="queryTimeout"></stringProp>
+              <stringProp name="resultSetHandler">Store as String</stringProp>
+              <stringProp name="resultSetMaxRows"></stringProp>
+            </JDBCSampler>
+            <hashTree>
+              <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="true">
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="script">// setting to 1, to indicate first line of the test case is executed
+vars.put(&quot;testCaseLineNum&quot;, &quot;1&quot;)</stringProp>
+                <stringProp name="scriptLanguage">groovy</stringProp>
+              </JSR223PostProcessor>
+              <hashTree/>
+            </hashTree>
+            <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller" enabled="true">
+              <collectionProp name="ModuleController.node_path">
+                <stringProp name="764597751">Test Plan</stringProp>
+                <stringProp name="136048680">apiTestingFrameWork</stringProp>
+                <stringProp name="170071582">Test Fragment</stringProp>
+              </collectionProp>
+            </ModuleController>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler 1" enabled="false">
+          <boolProp name="displayJMeterProperties">false</boolProp>
+          <boolProp name="displayJMeterVariables">true</boolProp>
+          <boolProp name="displaySystemProperties">false</boolProp>
+        </DebugSampler>
+        <hashTree/>
+      </hashTree>
+      <PostThreadGroup guiclass="PostThreadGroupGui" testclass="PostThreadGroup" testname="tearDown Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1523514669000</longProp>
+        <longProp name="ThreadGroup.end_time">1523514669000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </PostThreadGroup>
+      <hashTree>
+        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="delete db" enabled="true">
+          <stringProp name="scriptLanguage">groovy</stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="cacheKey">true</stringProp>
+          <stringProp name="script">import groovy.io.FileType
+
+//def tempDbFile = new File(vars.get(&quot;tmpDbFileName&quot;))
+def tempDbFile = new File(vars.get(&quot;tmpDbFileName&quot;))
+log.info(&quot;Full path of database file: &quot; + vars.get(&quot;tmpDbFileName&quot;)) 
+
+
+if (tempDbFile.exists()) {
+    log.info(&quot;db file exists thus deleting...&quot;)
+    if (tempDbFile.delete()) {
+        log.info(&quot;Successfully Deleted file: &quot; + tempDbFile) 
+    } else {
+        log.info(&quot;unable to delete file: &quot; + tempDbFile)
+         ctx.getEngine().askThreadsToStop();
+    }
+} else {
+   log.info(&quot;no db file exists&quot;)
+}
+
+props.remove(&quot;htmlReporterObj&quot;);
+props.remove(&quot;extentObj&quot;);
+props.remove(&quot;firstTimeFlag&quot;);</stringProp>
+        </JSR223Sampler>
+        <hashTree>
+          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+            <stringProp name="ConstantTimer.delay">5000</stringProp>
+          </ConstantTimer>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>true</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>true</responseData>
+            <samplerData>true</samplerData>
+            <xml>true</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>true</responseHeaders>
+            <requestHeaders>true</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <fileName>true</fileName>
+            <hostname>true</hostname>
+            <threadCounts>true</threadCounts>
+            <sampleCount>true</sampleCount>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

@@ -1,0 +1,1 @@
+{"Entitlement":[{"RoleId":${RoleId},"RoleCode":"${RoleCode}","RoleDescription":"${RoleDescription}","RoleGrade":${RoleGrade},"Resource":[{"ResourceId":${ResourceId},"ResourceCode":"${ResourceCode}","ResourceDescription":"${ResourceDescription}","Access":[{"AccessId":${AccessId},"AccessCode":"${AccessCode}","AccessDescription":"${AccessDescription}"}]}]}]}

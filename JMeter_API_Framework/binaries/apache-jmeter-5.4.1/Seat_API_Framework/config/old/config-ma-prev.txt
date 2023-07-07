@@ -1,0 +1,41 @@
+#-----------------------------------------------------------------------------#
+#                         API TEST PARAMETERS CONFIGURATION                   #
+#-----------------------------------------------------------------------------#
+#                  MACHINE ADVISOR TEST ENVIRONMENT - DASS		      #
+#-----------------------------------------------------------------------------#
+#TEST_ENV=SQE OR GATEWAY-PPR OR PPR
+#TEST_ENV=SQE
+#SEAT-VERSION=1.0.0
+#-----------------------------------------------------------------------------#
+#TEST CASE SELECTION - UNCOMMENT THE FOLLOWING FOR LOCAL EXECUTION WITH JMETER#
+#-----------------------------------------------------------------------------#
+# if left blank means ALL
+# specific test cases: SPIM-316 or more than 1 test cases SPIM-316,SPIM-317
+# specific priority test case : P1 or multiple priority P1,P2 
+# EXECUTE_TEST_CASES=SPIM-206,SPIM-399,SPIM-403,SPIM-205 1266
+# if P1,P2 = multiple priority, first P1, then P2 test cases are executed
+
+#EXECUTE_TEST_CASES=SPIM-TC001,SPIM-TC002
+#EXECUTE_TEST_CASES=P1,P2,P3
+#EXECUTE_TEST_CASES=P1,P2
+#-----------------------------------------------------------------------------#
+# FRAMEWORK PATHS - UNCOMMENT THE FOLLOWING FOR LOCAL EXECUTION WITH JMETER   #
+#-----------------------------------------------------------------------------#
+#FRAMEWORK_PATH=C:\Seat_Jmeter_Base\JMeter_TestFrame\API_Tests\
+#BINARIES=fw\lib
+#CONFIG_PATH=config
+#
+#TEST_REPORTS_LOCATION=results
+#TEST_CASE_LOCATION=testCases/MA/
+#TEST_CASE_LOCATION=testCases/MA-DaaS/
+
+# if left blank, then all the test cases in directory
+#TEST_FILE_EXECUTE=MAtest.csv
+#TEST_FILE_EXECUTE=prevTest.csv
+#-----------------------------------------------------------------------------#
+#                         ENDPOINT/API OF APPLICATION                         #
+#-----------------------------------------------------------------------------#
+MA_BASE_URL=prev.machine-advisor.com
+MA_ENDPOINT=daas/graphql
+token=Bearer 9XrZjwRMKpQeRGEeVz92XH7avSKRm1EmGtkrx1MW
+

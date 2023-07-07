@@ -1,0 +1,7 @@
+[
+  {
+    "roleId": 51,
+    "resourceId": 111,
+    "accessId": 3
+  }
+]

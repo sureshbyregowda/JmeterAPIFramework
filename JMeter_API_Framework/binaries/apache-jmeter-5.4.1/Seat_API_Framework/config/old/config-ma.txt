@@ -1,0 +1,70 @@
+#-----------------------------------------------------------------------------#
+#                         DEFINE TEST CONSTANTS HERE                          #
+#-----------------------------------------------------------------------------#
+#                  TEST ENVIRONMENT WHERE  TEST ARE TO BE EXECUTED            #
+#-----------------------------------------------------------------------------#
+#TEST_ENV=SQE OR GATEWAY-PPR OR PPR
+TEST_ENV=SQE
+SEAT-VERSION=1.0.0
+GATEWAY_IP_PROXY=gateway.schneider.zscaler.net
+GATEWAY_PORT_PROXY=80
+#-----------------------------------------------------------------------------#
+#                       TEST CASES ARE TO BE EXECUTED                         #
+#-----------------------------------------------------------------------------#
+# if left blank means ALL
+# specific test cases: SPIM-316 or more than 1 test cases SPIM-316,SPIM-317
+# specific priority test case : P1 or multiple priority P1,P2 
+# EXECUTE_TEST_CASES=SPIM-206,SPIM-399,SPIM-403,SPIM-205 1266
+# if P1,P2 = multiple priority, first P1, then P2 test cases are executed
+
+#EXECUTE_TEST_CASES=SPIM-TC001,SPIM-TC002
+EXECUTE_TEST_CASES=P1,P2,P3
+#EXECUTE_TEST_CASES=P1,P2
+#EXECUTE_TEST_CASES=
+#EXECUTE_TEST_CASES=ID-TC002
+#-----------------------------------------------------------------------------#
+#                    CSV FILE WHERE TEST CASES ARE LOCATED                    #
+#-----------------------------------------------------------------------------#
+FRAMEWORK_PATH=C:/Seat_API_Framework/
+BINARIES=binaries
+CONFIG_PATH=config
+#
+TEST_REPORTS_LOCATION=results
+TEST_CASE_LOCATION=testCases/MA-DaaS/
+#TEST_CASE_LOCATION=testCases/caf/
+#TEST_CASE_LOCATION=testCases/MA/
+
+# if left blank, then all the test cases in directory
+#TEST_FILE_EXECUTE=
+TEST_FILE_EXECUTE=testSteps.csv
+#TEST_FILE_EXECUTE=cafAuthentication.csv
+#TEST_FILE_EXECUTE=MAtest.csv
+#-----------------------------------------------------------------------------#
+#                  DEV ENVIRONMENT OF MACHINE ADVISOR                  #
+#-----------------------------------------------------------------------------#
+#MA_BASE_URL=api.prev.machine-advisor.com
+#---------------------- SETUP FOR INTERNAL DEV ENVIRONMENT ---------- ---------------------------------#
+#MA_BASE_URL=api.prev.machine-advisor.com
+ai_session_value=5PGKF|1602472442584|1602479935404.52
+ai_session_domain=prev.machine-advisor.com
+ai_user_value=c4ekT|2020-08-27T05:37:15.933Z
+ai_user_domain=prev.machine-advisor.com
+id_value=s%3AamLTNtF-iX7LJbmItBPEnNdtdnczfm1O.LLVmR%2BsputoTBz%2FKBTZEhL3dxTLjGu7TPTbTJByzwEw
+id_domain=api.prev.machine-advisor.com
+#---------------------- HEADER FOR INTERNAL DEV ENVIRONMENT --- ---------------------------------------#
+Accept=application/json, text/plain, */*
+Origin=https://prev.machine-advisor.com
+Content-Type=application/json
+Referer=https://prev.machine-advisor.com/fleet
+#-----------------------------------------------------------------------------#
+#                 PREV ENVIRONMENT OF MACHINE ADVISOR                  #
+#-----------------------------------------------------------------------------#
+MA_BASE_URL=prev.machine-advisor.com
+MA_ENDPOINT=daas/graphql
+token=Bearer 9XrZjwRMKpQeRGEeVz92XH7avSKRm1EmGtkrx1MW
+#-----------------------------------------------------------------------------#
+#                     QA ENVIRONMENT OF MACHINE ADVISOR                     #
+#-----------------------------------------------------------------------------#
+#MA_BASE_URL=qa.machine-advisor.com
+#MA_ENDPOINT=daas/graphql
+#token=Bearer Ay2NFxcRN9dtcjec917sdNmXVjpPWDCPahnY3eGZ

@@ -1,0 +1,1 @@
+{"id":${id},"code":"${code}","description":"${description}","appId":${appId},"updatedOn":"${updatedOn}","isActive":"${isActive}","recordStatus":${recordStatus}}

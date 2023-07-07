@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<sample t="64" s="false" lb="JSR223 Sampler" rc="500" rm="javax.script.ScriptException: java.lang.NullPointerException: Cannot invoke method replaceAll() on null object">
+  <responseHeader class="java.lang.String"></responseHeader>
+  <responseFile class="java.lang.String"></responseFile>
+</sample>
+
+<sample t="29" s="false" lb="JSR223 Sampler" rc="500" rm="javax.script.ScriptException: java.lang.NullPointerException: Cannot invoke method replaceAll() on null object">
+  <responseHeader class="java.lang.String"></responseHeader>
+  <responseFile class="java.lang.String"></responseFile>
+</sample>
+
+<sample t="18" s="false" lb="JSR223 Sampler" rc="500" rm="javax.script.ScriptException: java.lang.NullPointerException: Cannot invoke method replaceAll() on null object">
+  <responseHeader class="java.lang.String"></responseHeader>
+  <responseFile class="java.lang.String"></responseFile>
+</sample>
+
+<sample t="18" s="false" lb="JSR223 Sampler" rc="500" rm="javax.script.ScriptException: java.lang.NullPointerException: Cannot invoke method replaceAll() on null object">
+  <responseHeader class="java.lang.String"></responseHeader>
+  <responseFile class="java.lang.String"></responseFile>
+</sample>
+
+<sample t="19" s="false" lb="JSR223 Sampler" rc="500" rm="javax.script.ScriptException: java.lang.NullPointerException: Cannot invoke method replaceAll() on null object">
+  <responseHeader class="java.lang.String"></responseHeader>
+  <responseFile class="java.lang.String"></responseFile>
+</sample>
+
+<sample t="68" s="false" lb="JSR223 Sampler" rc="500" rm="javax.script.ScriptException: java.lang.NullPointerException: Cannot invoke method replaceAll() on null object">
+  <responseHeader class="java.lang.String"></responseHeader>
+  <responseFile class="java.lang.String"></responseFile>
+</sample>
+
+</testResults>

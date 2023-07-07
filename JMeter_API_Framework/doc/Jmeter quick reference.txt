@@ -1,0 +1,72 @@
+#-----------------------------------------------------------------------------#
+#             SIGNIFY API TESTS USING JMeter      			      #
+#-----------------------------------------------------------------------------#
+#                  CONFIG FILE SETUP - TEST ENVIRONMENT VARIABLES             #
+#-----------------------------------------------------------------------------#
+#                       TEST CASES TO BE EXECUTED                             #
+#-----------------------------------------------------------------------------#
+# if left blank means ALL
+# specific test cases: TC-001 or more than 1 test cases TC-001,TC-002
+# specific priority test case : P1 or multiple priority P1,P2 
+# EXECUTE_TEST_CASES=TC-001,TC-002
+# if P1,P2,P3 = multiple priority, first P1, second P2, then P3 test cases are executed
+
+EXECUTE_TEST_CASES=P2
+#-----------------------------------------------------------------------------#
+#                    CSV FILE WHERE TEST CASES ARE LOCATED                    #
+#-----------------------------------------------------------------------------#
+FRAMEWORK_PATH=C:/JMeter_API_Framework/
+BINARIES=binaries
+CONFIG_PATH=config
+TEST_REPORTS_LOCATION=results
+TEST_CASE_LOCATION=testCases/CTX
+
+# if left blank, then all the test cases in directory
+#TEST_FILE_EXECUTE=ExternalAPIs.csv
+#TEST_FILE_EXECUTE=ControlLink.csv
+#TEST_FILE_EXECUTE=AssetLink.csv
+#TEST_FILE_EXECUTE=AssetStream.csv
+#TEST_FILE_EXECUTE=EnergyStream.csv
+#TEST_FILE_EXECUTE=AssetInfo.csv
+#TEST_FILE_EXECUTE=ControlLink.csv,AssetLink.csv,AssetStream.csv,EnergyStream.csv,AssetInfo.csv
+
+TEST_FILE_EXECUTE=
+
+#-----------------------------------------------------------------------------#
+#                    SETUP and EXECUTION                 #
+#-----------------------------------------------------------------------------#
+Copy C:\JMeter_API_Framework to test environment/ local system
+(If the root folder is different, update FRAMEWORK_PATH in config file)
+After creating test cases for projects, upload complete folder to project specific repository "JMeter_API_Framework"
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+-------------------- Examples for test cases -------------------------------------
+Refer to test case examples in the folder C:\JMeter_API_Framework\testCases\CTX
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+-- TO TEST LOCALLY - USE LATEST FILE NAME: JmeterApiFrameWorkv1.jmx
+
+To open JMeter: run batch file
+C:\JMeter_API_Framework\binaries\apache-jmeter-5.0\bin\Jmeter.bat
+
+-----execute
+Open framework file "JmeterApiFrameWorkv1.jmx" in JMeter and execute
+
+-- command line execution
+--open command prompt from C:\JMeter_API_Framework\binaries\apache-jmeter-5.0\bin
+--run command
+JMeter -n -t C:\JMeter_API_Framework\fw\JmeterApiFrameWorkv1.jmx -l C:\JMeter_API_Framework\results/file.jtl
+
+#-----------------------------------------------------------------------------------------------------------------------------------#
+#		If user wants to copy and run framework in different location ---> Update config file path in 2 locations												
+#-----------------------------------------------------------------------------------------------------------------------------------#
+Update framework config file --->  FRAMEWORK_PATH=C:/JMeter_API_Framework/config.txt
+Open JmeterApiFrameWorkv1.jmx in Jmeter and then browse for config file in "jp@gc - Variables From CSV File" -->  C:\JMeter_API_Framework\config\config.txt
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+

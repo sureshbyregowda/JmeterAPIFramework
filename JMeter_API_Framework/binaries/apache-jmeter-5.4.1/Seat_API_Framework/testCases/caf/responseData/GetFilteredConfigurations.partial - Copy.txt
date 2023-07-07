@@ -1,0 +1,1 @@
+{"configId":36,"configType":"test","latestUri":"https://caf-vault-prev.vault.azure.net:443/secrets/caf-test-dev-testconfig/64712a85f20d4325a57a531cce99fa6e","isActive":"Y","updatedOn":"2019-06-20T06:45:03.513"}

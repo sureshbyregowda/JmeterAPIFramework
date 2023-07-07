@@ -1,0 +1,20 @@
+TC_NUMBER,TEST_DESC,PRIORITY,STEPNUMBER,LABEL,PROTOCOL,METHOD,API_URL,API_RESOURCES,API_DATA,HEADER,EXPECTED_RESPONSE_CODE,EXPECTED_RESPONSE_MESSAGE,EXPECTED_RESPONSE_DATA,REPONSE_VALUE_EXTRACTION,EXTRACTED_VALUE,GATEWAY_IP,GATEWAY_PORT,WAIT_TIME_SEC
+INVALID_TOKEN_01,Set Light Level for StreetLight with invalid token,P1,1,Set Light Level for StreetLight with invalid token,https,POST,${SA_BASE_URL},${SA_ENDPOINT}/${SA_PROJECT_ID}/setlightlevelforstreetlight,"{
+	""Level"":		""10"",
+	""ResetInHours"":	""0.5"",
+	""ExternalId"":	""d2c615f9-4d8f-4e5b-861d-a0f2056810c1""
+}","Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",401,Unauthorized,"${__FileToString(${FRAMEWORK_PATH}${TEST_CASE_LOCATION}\responseData\response-Set Light Level for StreetLight with invalid token-run.json,,)}",,,,,
+INVALID_TOKEN_02,Set Light Level for Group with invalid token,P1,1,Set Light Level for Group with invalid token,https,POST,${SA_BASE_URL},${SA_ENDPOINT}/${SA_PROJECT_ID}/setlightlevelforgroup/,"
+{
+	""Level"":		""100"",
+	""ResetInHours"": ""0.5"",
+	""GroupName"":	""MyGroup""
+}","Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",401,Unauthorized,,,,,,
+INVALID_TOKEN_03,Set Light Level for Street with invalid token,P1,1,Set Light Level for Street with invalid token,https,POST,${SA_BASE_URL},${SA_ENDPOINT}/${SA_PROJECT_ID}/setlightlevelforstreet,"{
+	""Level"":		""100"",
+	""ResetInHours"":	""0.5"",
+	""PathName"": 	""/Test-1/Test1-1""
+}","Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",401,Unauthorized,,,,,,
+INVALID_TOKEN_04,Request Counter with invalid token,P1,1,Request Counter with invalid token,https,GET,${SA_BASE_URL},${SA_ENDPOINT}/${SA_PROJECT_ID}/requestcounter,,"Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",401,Unauthorized,,,,,,
+INVALID_TOKEN_05,Invalid token,P1,1,Invalid token,https,GET,${SA_BASE_URL},${SA_ASSET_ENDPOINT}/${SA_PROJECT_ID}/count/luminaires,,"Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",401,Unauthorized,,,,,,
+INVALID_TOKEN_06,invalid token,P1,1,invalid token,https,GET,${SA_BASE_URL},${SA_ASSET_ENDPOINT}/${SA_PROJECT_ID}/assets/71507f22-9cc5-4aac-a6a6-9c70fcb21859?includeEmptyProperties=false,,"Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",401,Unauthorized,,,,,,

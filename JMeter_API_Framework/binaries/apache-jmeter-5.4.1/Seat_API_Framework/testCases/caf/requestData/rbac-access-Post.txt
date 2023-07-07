@@ -1,0 +1,1 @@
+{     "id": 0,     "code": "READ",     "description": "Read Access",     "appId": 627,     "updatedOn": "2019-06-04T06:05:57.293",     "isActive": "\u0000",     "recordStatus": 0   }

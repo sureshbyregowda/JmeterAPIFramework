@@ -1,0 +1,1 @@
+{"Entitlement":[{"RoleId":43,"RoleCode":"BASIC","RoleDescription":"Basic UI Role","RoleGrade":0,"Resource":[{"ResourceId":114,"ResourceCode":"ACCL","ResourceDescription":"Access Control","Access":[{"AccessId":31,"AccessCode":"READ","AccessDescription":"Read Access"}]}]}]}

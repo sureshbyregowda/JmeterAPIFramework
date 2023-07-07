@@ -1,0 +1,37 @@
+NAME,METHOD,PROTOCOL,API_URL,API_RESOUCES,API_DATA,EXPECTED_RESPONSE_DATA,REPONSE_VALUE_EXTRACTION,EXTRACTED_VALUE,EXPECTED_RESPONSE_CODE,EXPECTED_RESPONSE_MESSAGE
+projectOwner-login,POST,https,${LOGIN_BASE_URL},${GET_TOKEN_API},grant_type=password&username=${USERNAME}&password=${PASSWORD},,$.access_token;$.expires_in,authCode;expiryTime,200,OK
+,,,,,,,,,,
+projectOwner-getFedratedId,GET,https,${LOGIN_BASE_URL},${GET_FEDRATED_API}?email=${USERNAME},,,$.federatedId,ownerId,200,OK
+,,,,,,,,,,
+projectOwner-createProject,POST,https,${SPIM_BASE_URL},${SPIM_ENDPOINT}/projects,"{
+    ""title"":""${__time(,prjTitle)}""
+}","{
+  ""message"": ""Project ${projectId} created"",
+  ""project"": {
+    ""id"": ""${projectId}"",
+    ""ownerId"": ""${ownerId}"",
+    ""title"": ""${prjTitle}"",
+    ""dateCreated"": ${projectCreatedDate}
+    ""dateUpdated"": ${projectUpdatedDate}
+    ""configurations"": [
+      {
+        ""id"": ""${projectConfigurationId}"",
+        ""ownerId"": ""${ownerId}"",
+        ""dateCreated"": ${projectConfigurationCreatedDate},
+        ""dateUpdated"": ${projectConfigurationUpdatedDate},
+        ""states"": [],
+        ""files"": []
+      }
+    ],
+    ""files"": [],
+    ""customFieldsMap"": {},
+    ""teams"": [],
+    ""collaborators"": [],
+    ""coOwners"": [],
+    ""consumers"": [],
+    ""contributors"": [],
+    ""customFieldNames"": []
+  }
+}",$.project.title;$.project.id;$.project.dateCreated;$.project.dateUpdated;$.project.configurations[*].id;$.project.configurations[*].dateCreated;$.project.configurations[*].dateUpdated,projectTitle;projectId;projectCreatedDate;projectUpdatedDate;projectConfigurationId;projectConfigurationCreatedDate;projectConfigurationUpdatedDate,200,OK
+,,,,,,,,,,
+projectOwner-deleteProject,DELETE,https,${SPIM_BASE_URL},${SPIM_ENDPOINT}/projects/${projectId},,"${__FileToString(${DATA_LOCATION}\deleteProjectResponseData.txt,,)}",$.NA,,200,OK

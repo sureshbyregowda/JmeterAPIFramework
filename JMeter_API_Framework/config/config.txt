@@ -1,0 +1,55 @@
+#-----------------------------------------------------------------------------#
+#                         DEFINE TEST CONSTANTS HERE                          #
+#-----------------------------------------------------------------------------#
+#                  CONFIG FILE SETUP - TEST ENVIRONMENT VARIABLES             #
+#-----------------------------------------------------------------------------#
+#                       TEST CASES ARE TO BE EXECUTED                         #
+#-----------------------------------------------------------------------------#
+# if left blank means ALL
+# specific test cases: TC-001 or more than 1 test cases TC-001,TC-002
+# specific priority test case : P1 or multiple priority P1,P2 
+# EXECUTE_TEST_CASES=TC-001,TC-002
+# if P1,P2,P3 = multiple priority, first P1, second P2, then P3 test cases are executed
+
+EXECUTE_TEST_CASES=
+#-----------------------------------------------------------------------------#
+#                    CSV FILE WHERE TEST CASES ARE LOCATED                    #
+#-----------------------------------------------------------------------------#
+FRAMEWORK_PATH=C:/JMeter_API_Framework/
+BINARIES=binaries
+CONFIG_PATH=config
+TEST_REPORTS_LOCATION=results
+TEST_CASE_LOCATION=testCases/CTX
+
+service=city
+app_key=U2g5TEeo8MsASP5HUjOQ4rg1udGsfnH9
+app_secret=UvFR70SCrVteBLQq
+scope=useradminapi_all_read%20read
+
+
+# if left blank, then all the test cases in directorys
+TEST_FILE_EXECUTE=ExternalAPIs.csv
+#TEST_FILE_EXECUTE=ControlLink.csv
+#TEST_FILE_EXECUTE=AssetLink.csv
+#TEST_FILE_EXECUTE=AssetStream.csv
+#TEST_FILE_EXECUTE=EnergyStream.csv
+#TEST_FILE_EXECUTE=AssetInfo.csv
+#TEST_FILE_EXECUTE=ControlLink.csv,AssetLink.csv,AssetStream.csv,EnergyStream.csv,AssetInfo.csv
+
+#TEST_FILE_EXECUTE=
+
+#-----------------------------------------------------------------------------#
+#                         ENDPOINT/API OF APPLICATION                         #
+#-----------------------------------------------------------------------------#
+SA_BASE_URL=api.re.developer.interact-lighting.com
+SA_ENDPOINT=interact/api/city/global/controllink/v1.0/en-us
+SA_ASSET_ENDPOINT=interact/api/city/global/assetlink/v1.0/en-us
+SA_STREAM_ENDPOINT=interact/api/city/global/assetstream/v2.0/en-us
+SA_ENERGYSTREAM_ENDPOINT=interact/api/city/global/energystream/v1.0/en-us
+SA_PROJECT_ID=25412144-c87c-46ec-910b-9976e4bdb784
+SA_EXTERNAL_ID=4080017
+SA_GROUP_NAME=Energy_Group1
+SA_STREET_PATH='/Energy_Region/teststreet'
+
+SA_GATEWAY_IP=
+SA_GATEWAY_PORT=

@@ -1,0 +1,3 @@
+TC_NUMBER,TEST_DESC,PRIORITY,STEPNUMBER,LABEL,PROTOCOL,METHOD,API_URL,API_RESOURCES,API_DATA,HEADER,EXPECTED_RESPONSE_CODE,EXPECTED_RESPONSE_MESSAGE,EXPECTED_RESPONSE_DATA,REPONSE_VALUE_EXTRACTION,EXTRACTED_VALUE,GATEWAY_IP,GATEWAY_PORT,WAIT_TIME_SEC
+ASSET_LINK_01,Asset link,P1,1,Asset link,https,GET,${SA_BASE_URL},${SA_ASSET_ENDPOINT}/${SA_PROJECT_ID}/count/luminaires,,"Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",200,OK,,,,,,
+ASSET_LINK_02,Invalid site id,P2,1,Invalid site id,https,GET,${SA_BASE_URL},${SA_ASSET_ENDPOINT}/23457dtydtkjkhtders3w35drxerw4xdfx/count/luminaires,,"Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",404,Not Found,,,,,,

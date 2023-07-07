@@ -1,0 +1,1 @@
+{     "id": 0,     "code": "USER",     "description": "User resource",     "appId": 627,     "updatedOn": "2019-06-04T06:00:30.437",     "isActive": "Y",     "recordStatus": 0   }

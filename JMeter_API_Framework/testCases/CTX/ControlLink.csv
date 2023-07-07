@@ -1,0 +1,156 @@
+TC_NUMBER,TEST_DESC,PRIORITY,STEPNUMBER,LABEL,PROTOCOL,METHOD,API_URL,API_RESOURCES,API_DATA,HEADER,EXPECTED_RESPONSE_CODE,EXPECTED_RESPONSE_MESSAGE,EXPECTED_RESPONSE_DATA,REPONSE_VALUE_EXTRACTION,EXTRACTED_VALUE,GATEWAY_IP,GATEWAY_PORT,WAIT_TIME_SEC
+CONTROL_LINK_01,Set Light Level for StreetLight with invalid site_id,P1,1,Set Light Level for StreetLight with invalid site_id,https,POST,${SA_BASE_URL},${SA_ENDPOINT}/abchd;lkajkhfhdjjkd/setlightlevelforstreetlight,"{
+	""Level"":		""10"",
+	""ResetInHours"":	""0.5"",
+	""ExternalId"":	""d2c615f9-4d8f-4e5b-861d-a0f2056810c1""
+}","Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",404,Not Found,,,,,,
+CONTROL_LINK_02,Set Light Level for StreetLight with negative light level,P1,1,Set Light Level for StreetLight with negative light level,https,POST,${SA_BASE_URL},${SA_ENDPOINT}/${SA_PROJECT_ID}/setlightlevelforstreetlight,"{
+	""Level"":		""-1"",
+	""ResetInHours"":	""0.5"",
+	""ExternalId"":	""71507f22-9cc5-4aac-a6a6-9c70fcb21859""
+}","Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",400,Bad Request,,,,,,
+CONTROL_LINK_03,Set Light Level for StreetLight with light level out of bound,P1,1,Set Light Level for StreetLight with light level out of bound,https,POST,${SA_BASE_URL},${SA_ENDPOINT}/${SA_PROJECT_ID}/setlightlevelforstreetlight,"{
+	""Level"":		""107"",
+	""ResetInHours"":	""0.5"",
+	""ExternalId"":	""71507f22-9cc5-4aac-a6a6-9c70fcb21859""
+}","Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",400,Bad Request,,,,,,
+CONTROL_LINK_04,Set Light Level for StreetLight with time out of bound,P1,1,Set Light Level for StreetLight with time out of bound,https,POST,${SA_BASE_URL},${SA_ENDPOINT}/${SA_PROJECT_ID}/setlightlevelforstreetlight,"{
+	""Level"":		""100"",
+	""ResetInHours"":	""25"",
+	""ExternalId"":	""71507f22-9cc5-4aac-a6a6-9c70fcb21859""
+}","Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",400,Bad Request,,,,,,
+CONTROL_LINK_05,Set Light Level for StreetLight with time out of bound lower range,P1,1,Set Light Level for StreetLight with time out of bound lower range,https,POST,${SA_BASE_URL},${SA_ENDPOINT}/${SA_PROJECT_ID}/setlightlevelforstreetlight,"{
+	""Level"":		""100"",
+	""ResetInHours"":	""0.4"",
+	""ExternalId"":	""71507f22-9cc5-4aac-a6a6-9c70fcb21859""
+}","Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",400,Bad Request,,,,,,
+CONTROL_LINK_06,Set Light Level for StreetLight with invalid external id,P1,1,Set Light Level for StreetLight with invalid external id,https,POST,${SA_BASE_URL},${SA_ENDPOINT}/${SA_PROJECT_ID}/setlightlevelforstreetlight,"{
+	""Level"":		""100"",
+	""ResetInHours"":	""0.5"",
+	""ExternalId"":	""71507f22-9cc5-4aac-a6a6-9c70fcffgf21859""
+}","Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",400,Bad Request,,,,,,
+CONTROL_LINK_07,Reset Light Level for StreetLight with invalid external id,P1,1,Reset Light Level for StreetLight with invalid external id,https,POST,${SA_BASE_URL},${SA_ENDPOINT}/${SA_PROJECT_ID}/resetstreetlight,"{
+	""ExternalId"": ""71507f22-9cc5-4aacdhfgg-a6a6-9c70fcb21859""
+}","Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",400,Bad Request,,,,,,
+CONTROL_LINK_08,Set Light Level for Group with invalid site_id,P2,1,Set Light Level for Group with invalid site_id,https,POST,${SA_BASE_URL},${SA_ENDPOINT}/abchd;lkajkhfhdjjkd/setlightlevelforgroup/,"{
+	""Level"":		""100"",
+	""ResetInHours"": ""0.5"",
+	""GroupName"":	""MyGroup""
+}","Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",404,Not Found,,,,,,
+CONTROL_LINK_09,Set Light Level for Group with negative light level,P1,1,Set Light Level for Group with negative light level,https,POST,${SA_BASE_URL},${SA_ENDPOINT}/${SA_PROJECT_ID}/setlightlevelforgroup/,"{
+	""Level"":		""-1"",
+	""ResetInHours"": ""0.5"",
+	""GroupName"":	""MyGroup""
+}","Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",400,Bad Request,,,,,,
+CONTROL_LINK_10,Set Light Level for Group with light level out of bound,P1,1,Set Light Level for Group with light level out of bound,https,POST,${SA_BASE_URL},${SA_ENDPOINT}/${SA_PROJECT_ID}/setlightlevelforgroup/,"{
+	""Level"":		""104"",
+	""ResetInHours"": ""0.5"",
+	""GroupName"":	""MyGroup""
+}","Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",400,Bad Request,,,,,,
+CONTROL_LINK_11,Set Light Level for Group with time out of bound,P1,1,Set Light Level for Group with time out of bound,https,POST,${SA_BASE_URL},${SA_ENDPOINT}/${SA_PROJECT_ID}/setlightlevelforgroup/,"{
+	""Level"":		""100"",
+	""ResetInHours"": ""25"",
+	""GroupName"":	""MyGroup""
+}","Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",400,Bad Request,,,,,,
+CONTROL_LINK_12,Set Light Level for Group with time out of bound lower range,P1,1,Set Light Level for Group with time out of bound lower range,https,POST,${SA_BASE_URL},${SA_ENDPOINT}/${SA_PROJECT_ID}/setlightlevelforgroup/,"{
+	""Level"":		""-1"",
+	""ResetInHours"": ""0.4"",
+	""GroupName"":	""MyGroup""
+}","Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",400,Bad Request,,,,,,
+CONTROL_LINK_13,Set Light Level for Group with invalid groupname,P1,1,Set Light Level for Group with invalid groupname,https,POST,${SA_BASE_URL},${SA_ENDPOINT}/${SA_PROJECT_ID}/setlightlevelforgroup/,"{
+	""Level"":		""-1"",
+	""ResetInHours"": ""0.5"",
+	""GroupName"":	""newGroup""
+}","Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",400,Bad Request,,,,,,
+CONTROL_LINK_14,Reset Light Level for Group with invalid group name,P2,1,Reset Light Level for Group with invalid group name,https,POST,${SA_BASE_URL},${SA_ENDPOINT}/${SA_PROJECT_ID}/setlightlevelforgroup/,"{
+	""GroupName"":	""newMyGroup""
+}","Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",400,Bad Request,,,,,,
+CONTROL_LINK_15,Set Light Level for Street with invalid site id,P1,1,Set Light Level for Street with invalid site id,https,POST,${SA_BASE_URL},${SA_ENDPOINT}/abchd;lkajkhfhdjjkd/setlightlevelforstreet,"{
+	""Level"":		""100"",
+	""ResetInHours"":	""0.5"",
+	""PathName"": 	""/Test-1/Test1-1""
+}","Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",404,Not Found,,,,,,
+CONTROL_LINK_16,Set Light Level for Street with negative light level,P1,1,Set Light Level for Street with negative light level,https,POST,${SA_BASE_URL},${SA_ENDPOINT}/${SA_PROJECT_ID}/setlightlevelforstreet,"{
+	""Level"":		""-1"",
+	""ResetInHours"":	""0.5"",
+	""PathName"": 	""/Test-1/Test1-1""
+}","Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",400,Bad Request,,,,,,
+CONTROL_LINK_17,Set Light Level for Street with light level out of bound,P1,1,Set Light Level for Street with light level out of bound,https,POST,${SA_BASE_URL},${SA_ENDPOINT}/${SA_PROJECT_ID}/setlightlevelforstreet,"{
+	""Level"":		""105"",
+	""ResetInHours"":	""0.5"",
+	""PathName"": 	""/Test-1/Test1-1""
+}","Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",400,Bad Request,,,,,,
+CONTROL_LINK_18,Set Light Level for Street with time out of bound,P1,1,Set Light Level for Street with time out of bound,https,POST,${SA_BASE_URL},${SA_ENDPOINT}/${SA_PROJECT_ID}/setlightlevelforstreet,"{
+	""Level"":		""100"",
+	""ResetInHours"":	""25"",
+	""PathName"": 	""/Test-1/Test1-1""
+}","Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",400,Bad Request,,,,,,
+CONTROL_LINK_19,Set Light Level for Street with time out of bound lower range,P1,1,Set Light Level for Street with time out of bound lower range,https,POST,${SA_BASE_URL},${SA_ENDPOINT}/${SA_PROJECT_ID}/setlightlevelforstreet,"{
+	""Level"":		""100"",
+	""ResetInHours"":	""0.4"",
+	""PathName"": 	""/Test-1/Test1-1""
+}","Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",400,Bad Request,,,,,,
+CONTROL_LINK_20,Set Light Level for Street with invalid path name,P1,1,Set Light Level for Street with invalid path name,https,POST,${SA_BASE_URL},${SA_ENDPOINT}/${SA_PROJECT_ID}/setlightlevelforstreet,"{
+	""Level"":		""100"",
+	""ResetInHours"":	""0.4"",
+	""PathName"": 	""/Test-2/Test2-1""
+}","Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",400,Bad Request,,,,,,
+CONTROL_LINK_21,Reset Light Level for Street with invalid path name,P1,1,Reset Light Level for Street with invalid path name,https,POST,${SA_BASE_URL},${SA_ENDPOINT}/${SA_PROJECT_ID}/setlightlevelforstreet,"{
+	""PathName"": 	""/Test-2/Test2-1""
+}","Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",400,Bad Request,,,,,,
+CONTROL_LINK_22,Request Counter with invalid site id,P1,1,Request Counter with invalid site id,https,GET,${SA_BASE_URL},${SA_ENDPOINT}/e67dfd5f-d0ce-42f3-8c03-ed9b3057e64axyzabcd/requestcounter,,"Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",404,Not Found,,,,,,
+CONTROL_LINK_23,Request for Count,P1,1,Request for Count,https,GET,${SA_BASE_URL},${SA_ENDPOINT}/${SA_PROJECT_ID}/requestcounter,,"Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",200,OK,,,,,,
+CONTROL_LINK_24,Set Light Level for a Streetlight ( valid case-100%),P1,1,Set Light Level for a Streetlight ( valid case-100%),https,POST,${SA_BASE_URL},${SA_ENDPOINT}/${SA_PROJECT_ID}/setlightlevelforstreetlight,"{
+	""Level"": 100,
+	""ResetInHours"": 0.5,
+	""ExternalId"": ${SA_EXTERNAL_ID}   
+}","Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",200,OK,"${__FileToString(${FRAMEWORK_PATH}${TEST_CASE_LOCATION}\responseData\response-Set Light Level for a Streetlight ( valid case-100%)-run.json,,)}",,,,,
+CONTROL_LINK_25,Set Light Level for a Streetlight ( valid case -50%),P1,1,Set Light Level for a Streetlight ( valid case -50%),https,POST,${SA_BASE_URL},${SA_ENDPOINT}/${SA_PROJECT_ID}/setlightlevelforstreetlight,"{
+	""Level"": 50,
+	""ResetInHours"": 0.5,
+	""ExternalId"": ${SA_EXTERNAL_ID}   
+}","Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",200,OK,"${__FileToString(${FRAMEWORK_PATH}${TEST_CASE_LOCATION}\responseData\response-Set Light Level for a Streetlight ( valid case -50%)-run.json,,)}",,,,,
+CONTROL_LINK_26,Set Light Level for a Streetlight ( valid case -0%),P1,1,Set Light Level for a Streetlight ( valid case -0%),https,POST,${SA_BASE_URL},${SA_ENDPOINT}/${SA_PROJECT_ID}/setlightlevelforstreetlight,"{
+	""Level"": 0,
+	""ResetInHours"": 0.5,
+	""ExternalId"": ${SA_EXTERNAL_ID}   
+}","Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",200,OK,"${__FileToString(${FRAMEWORK_PATH}${TEST_CASE_LOCATION}\responseData\response-Set Light Level for a Streetlight ( valid case -0%)-run.json,,)}",,,,,
+CONTROL_LINK_27,Reset Light Level for a connected StreetLight(valid case),P1,1,Reset Light Level for a connected StreetLight(valid case),https,POST,${SA_BASE_URL},${SA_ENDPOINT}/${SA_PROJECT_ID}/resetstreetlight," 	{
+	 ""ExternalId"": ${SA_EXTERNAL_ID}
+	}","Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",200,OK,,,,,,
+CONTROL_LINK_28,Set Light Level for a Group which contains connected streetlights(100%),P1,1,Set Light Level for a Group which contains connected streetlights(100%),https,POST,${SA_BASE_URL},${SA_ENDPOINT}/${SA_PROJECT_ID}/setlightlevelforgroup,"	{
+	 ""Level"": ""100"",
+	 ""ResetInHours"": ""0.5"",
+	 ""GroupName"": ${SA_GROUP_NAME}
+	}","Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",200,OK,,,,,,
+CONTROL_LINK_29,Set Light Level for a Group which contains connected streetlights(50%),P1,1,Set Light Level for a Group which contains connected streetlights(50%),https,POST,${SA_BASE_URL},${SA_ENDPOINT}/${SA_PROJECT_ID}/setlightlevelforgroup," 	{
+	 ""Level"": ""50"",
+	 ""ResetInHours"": ""0.5"",
+	 ""GroupName"": ${SA_GROUP_NAME}
+	}","Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",200,OK,,,,,,
+CONTROL_LINK_30,Set Light Level for a Group which contains connected streetlights(0%),P1,1,Set Light Level for a Group which contains connected streetlights(0%),https,POST,${SA_BASE_URL},${SA_ENDPOINT}/${SA_PROJECT_ID}/setlightlevelforgroup," 	{
+	 ""Level"": ""0"",
+	 ""ResetInHours"": ""0.5"",
+	 ""GroupName"": ${SA_GROUP_NAME}
+	}","Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",200,OK,,,,,,
+CONTROL_LINK_31,Reset Light Level for a Group which contains connected streetlights,P1,1,Reset Light Level for a Group which contains connected streetlights,https,POST,${SA_BASE_URL},${SA_ENDPOINT}/${SA_PROJECT_ID}/resetgroup,"{
+	""GroupName"": ${SA_GROUP_NAME}
+}","Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",200,OK,,,,,,
+CONTROL_LINK_32,Set Light Level for Street Path which contains connected streetlights(100%),P2,1,Set Light Level for Street Path which contains connected streetlights(100%),https,POST,${SA_BASE_URL},${SA_ENDPOINT}/${SA_PROJECT_ID}/setlightlevelforstreet," 	{
+	 ""Level"":""100"",
+	 ""ResetInHours"":""0.5"",
+	 ""PathName"": ${SA_STREET_PATH}
+	}","Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",200,OK,,,,,,
+CONTROL_LINK_33,Set Light Level for Street Path which contains connected streetlights(50%),P1,1,Set Light Level for Street Path which contains connected streetlights(50%),https,POST,${SA_BASE_URL},${SA_ENDPOINT}/${SA_PROJECT_ID}/setlightlevelforstreet," 	{
+	 ""Level"":""50"",
+	 ""ResetInHours"":""0.5"",
+	 ""PathName"":${SA_STREET_PATH}
+	}","Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",200,OK,,,,,,
+CONTROL_LINK_34,Set Light Level for Street Path which contains connected streetlights(0%),P1,1,Set Light Level for Street Path which contains connected streetlights(0%),https,POST,${SA_BASE_URL},${SA_ENDPOINT}/${SA_PROJECT_ID}/setlightlevelforstreet/," 	{
+	 ""Level"":""0"",
+	 ""ResetInHours"":""0.5"",
+	 ""PathName"": ${SA_STREET_PATH}
+	}","Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",200,OK,,,,,,
+CONTROL_LINK_35,Reset Light Level for Street Path which contains connected streetlights,P1,1,Reset Light Level for Street Path which contains connected streetlights,https,POST,${SA_BASE_URL},${SA_ENDPOINT}/${SA_PROJECT_ID}/resetstreet," 	{
+	 ""PathName"": ${SA_STREET_PATH}
+	}","Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",200,OK,,,,,,

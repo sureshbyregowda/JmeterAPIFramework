@@ -1,0 +1,4 @@
+TC_NUMBER,TEST_DESC,PRIORITY,STEPNUMBER,LABEL,PROTOCOL,METHOD,API_URL,API_RESOURCES,API_DATA,HEADER,EXPECTED_RESPONSE_CODE,EXPECTED_RESPONSE_MESSAGE,EXPECTED_RESPONSE_DATA,REPONSE_VALUE_EXTRACTION,EXTRACTED_VALUE,GATEWAY_IP,GATEWAY_PORT,WAIT_TIME_SEC
+ASSET_STREAM_01,Get Cursor,P1,1,Get Cursor,https,GET,${SA_BASE_URL},${SA_STREAM_ENDPOINT}/${SA_PROJECT_ID}/daily/cursor/start,,"Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",200,OK,,,,,,
+ASSET_STREAM_02,Retrieve Asset stream,P1,1,Retrieve Asset stream,https,GET,${SA_BASE_URL},${SA_STREAM_ENDPOINT}/${SA_PROJECT_ID}/daily/0,,"Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",200,OK,,,,,,
+ASSET_STREAM_03,Asset Stream: Invalid site id,P2,1,Asset Stream: Invalid site id,https,GET,${SA_BASE_URL},${SA_STREAM_ENDPOINT}/abchd;lkajkhfhdjjkd/daily/0,,"Content-type: application/json,Accept-Encoding:gzip, deflate, br,Accept:*/*",404,Not Found,,,,,,

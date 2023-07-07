@@ -1,0 +1,390 @@
+2023-07-07 14:01:27,676 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2023-07-07 14:01:27,725 INFO o.a.j.JMeter: Loading user properties from: user.properties
+2023-07-07 14:01:27,735 INFO o.a.j.JMeter: Loading system properties from: system.properties
+2023-07-07 14:01:27,750 INFO o.a.j.JMeter: Copyright (c) 1998-2021 The Apache Software Foundation
+2023-07-07 14:01:27,750 INFO o.a.j.JMeter: Version 5.4.1
+2023-07-07 14:01:27,750 INFO o.a.j.JMeter: java.version=11.0.12
+2023-07-07 14:01:27,750 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2023-07-07 14:01:27,750 INFO o.a.j.JMeter: os.name=Windows 10
+2023-07-07 14:01:27,750 INFO o.a.j.JMeter: os.arch=amd64
+2023-07-07 14:01:27,750 INFO o.a.j.JMeter: os.version=10.0
+2023-07-07 14:01:27,750 INFO o.a.j.JMeter: file.encoding=Cp1252
+2023-07-07 14:01:27,750 INFO o.a.j.JMeter: java.awt.headless=null
+2023-07-07 14:01:27,750 INFO o.a.j.JMeter: Max memory     =1073741824
+2023-07-07 14:01:27,751 INFO o.a.j.JMeter: Available Processors =8
+2023-07-07 14:01:27,762 INFO o.a.j.JMeter: Default Locale=English (EN)
+2023-07-07 14:01:27,762 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2023-07-07 14:01:27,762 INFO o.a.j.JMeter: JMeterHome=C:\JMeter_API_Framework\binaries\apache-jmeter-5.4.1
+2023-07-07 14:01:27,762 INFO o.a.j.JMeter: user.dir  =C:\JMeter_API_Framework\binaries\apache-jmeter-5.4.1\bin
+2023-07-07 14:01:27,762 INFO o.a.j.JMeter: PWD       =C:\JMeter_API_Framework\binaries\apache-jmeter-5.4.1\bin
+2023-07-07 14:01:27,769 INFO o.a.j.JMeter: IP: 192.168.1.4 Name: DESKTOP-HO8PPFB FullName: host.docker.internal
+2023-07-07 14:01:28,069 INFO o.a.j.JMeter: Setting LAF to: com.github.weisj.darklaf.DarkLaf:com.github.weisj.darklaf.theme.DarculaTheme
+2023-07-07 14:01:32,451 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
+2023-07-07 14:01:34,277 INFO o.j.r.JARSourceHTTP: Requesting https://jmeter-plugins.org/repo/?installID=windows_10-9bd32945ad633d64ce620505e957f68c-gui
+2023-07-07 14:01:37,798 INFO o.j.r.PluginManager: Plugins Status: [jpgc-directory-listing=0.3, jpgc-plugins-manager=1.7, jpgc-csvars=0.1, jmeter-core=5.4.1, jmeter-ftp=5.4.1, jmeter-http=5.4.1, jmeter-jdbc=5.4.1, jmeter-jms=5.4.1, jmeter-junit=5.4.1, jmeter-java=5.4.1, jmeter-ldap=5.4.1, jmeter-mail=5.4.1, jmeter-mongodb=5.4.1, jmeter-native=5.4.1, jmeter-tcp=5.4.1, jmeter-components=5.4.1]
+2023-07-07 14:01:37,798 INFO o.j.r.PluginManagerMenuItem: Plugins Manager has upgrades: [jpgc-plugins-manager]
+2023-07-07 14:01:46,368 INFO o.a.j.s.FileServer: Default base='C:\JMeter_API_Framework\binaries\apache-jmeter-5.4.1\bin'
+2023-07-07 14:01:46,393 INFO o.a.j.g.a.Load: Loading file: C:\JMeter_API_Framework\fw\JmeterApiFrameWorkv.jmx
+2023-07-07 14:01:46,393 INFO o.a.j.s.FileServer: Set new base='C:\JMeter_API_Framework\fw'
+2023-07-07 14:01:46,944 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2023-07-07 14:01:46,962 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2023-07-07 14:01:46,963 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2023-07-07 14:01:46,966 INFO o.a.j.s.SaveService: Loading file: C:\JMeter_API_Framework\fw\JmeterApiFrameWorkv.jmx
+2023-07-07 14:01:47,129 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2023-07-07 14:01:47,129 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2023-07-07 14:01:47,129 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2023-07-07 14:01:47,129 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2023-07-07 14:01:47,129 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2023-07-07 14:01:47,129 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2023-07-07 14:01:47,705 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2023-07-07 14:01:47,705 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2023-07-07 14:01:47,705 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2023-07-07 14:01:47,705 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2023-07-07 14:01:47,906 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2023-07-07 14:01:48,754 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2023-07-07 14:01:48,803 INFO o.a.j.s.FileServer: Set new base='C:\JMeter_API_Framework\fw'
+2023-07-07 14:01:53,724 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2023-07-07 14:01:53,724 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2023-07-07 14:01:53,725 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2023-07-07 14:01:53,726 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2023-07-07 14:01:53,726 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2023-07-07 14:01:53,820 WARN o.a.j.f.FileToString: Could not read open: ${downloadPath}\apiRunTimeValues.json 
+2023-07-07 14:01:53,828 WARN o.a.j.f.FileToString: Could not read open: ${downloadPath}\apiRunTimeValues.json 
+2023-07-07 14:01:53,828 WARN o.a.j.f.FileToString: Could not read open: ${downloadPath}\apiRunTimeValues.json 
+2023-07-07 14:01:53,830 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2023-07-07 14:01:53,831 INFO o.a.j.e.StandardJMeterEngine: Starting setUp thread groups
+2023-07-07 14:01:53,831 INFO o.a.j.e.StandardJMeterEngine: Starting setUp ThreadGroup: 1 : setUp Thread Group 
+2023-07-07 14:01:53,832 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group setUp Thread Group.
+2023-07-07 14:01:53,832 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2023-07-07 14:01:53,833 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 delayedStart=false
+2023-07-07 14:01:53,837 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2023-07-07 14:01:53,837 INFO o.a.j.e.StandardJMeterEngine: Waiting for all setup thread groups to exit
+2023-07-07 14:01:53,838 INFO o.a.j.t.JMeterThread: Thread started: setUp Thread Group 1-1
+2023-07-07 14:01:54,863 INFO o.a.j.p.j.s.J.set sqlitePath: "JmeterApiFrameWorkv.jmx", is executed on OS: "Windows 10", machine type: "amd64"
+2023-07-07 14:01:54,874 INFO o.a.j.p.j.s.J.set sqlitePath: no file exists in location specified : binaries/sqllite/win/sqlite3.exe
+2023-07-07 14:01:54,886 INFO o.a.j.p.j.s.J.set sqlitePath: File exists in location specified : C:/JMeter_API_Framework/binaries/sqllite/win/sqlite3.exe
+2023-07-07 14:01:54,886 INFO o.a.j.p.j.s.J.set sqlitePath: sqlite executable path: C:/JMeter_API_Framework/binaries/sqllite/win/sqlite3.exe
+2023-07-07 14:01:54,886 INFO o.a.j.p.j.s.J.set sqlitePath: no file exists in location specified : sqlite3
+2023-07-07 14:01:54,894 INFO o.a.j.p.j.s.J.set sqlitePath: Full path of database file: importedTestCases.db
+2023-07-07 14:01:54,894 INFO o.a.j.p.j.s.J.set sqlitePath: no db file exists
+2023-07-07 14:01:55,759 INFO o.a.j.p.j.s.J.setFilePathsAndThreads: Creating table name for test case: ExternalAPIs.csv
+2023-07-07 14:01:55,784 INFO o.a.j.p.j.s.J.setFilePathsAndThreads: Table name for test case is: ExternalAPIs
+2023-07-07 14:01:55,786 INFO o.a.j.p.j.s.J.setFilePathsAndThreads: File path of test case: C:/JMeter_API_Framework/testCases/CTX/ExternalAPIs.csv
+2023-07-07 14:01:58,022 INFO o.a.j.s.TestAction: Stopping current thread from element Test Action
+2023-07-07 14:01:58,023 INFO o.a.j.t.JMeterThread: Stopping: setUp Thread Group 1-1
+2023-07-07 14:01:58,023 INFO o.a.j.t.JMeterThread: Thread finished: setUp Thread Group 1-1
+2023-07-07 14:01:58,025 INFO o.a.j.e.StandardJMeterEngine: All Setup Threads have ended
+2023-07-07 14:01:58,096 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2023-07-07 14:01:58,096 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group.
+2023-07-07 14:01:58,096 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2023-07-07 14:01:58,100 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=60 delayedStart=false
+2023-07-07 14:01:58,107 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2023-07-07 14:01:58,108 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2023-07-07 14:01:58,109 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2023-07-07 14:01:58,141 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = DESKTOP-HO8PPFB
+2023-07-07 14:01:58,144 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2023-07-07 14:01:58,685 INFO o.a.j.p.h.s.h.LazyLayeredConnectionSocketFactory: Setting up HTTPS TrustAll Socket Factory
+2023-07-07 14:01:58,685 INFO o.a.j.u.JsseSSLManager: Using default SSL protocol: TLS
+2023-07-07 14:01:58,685 INFO o.a.j.u.JsseSSLManager: SSL session context: per-thread
+2023-07-07 14:01:58,847 INFO o.a.j.u.SSLManager: JmeterKeyStore Location:  type JKS
+2023-07-07 14:01:58,856 INFO o.a.j.u.SSLManager: KeyStore created OK
+2023-07-07 14:01:58,856 WARN o.a.j.u.SSLManager: Keystore file not found, loading empty keystore
+2023-07-07 14:02:00,283 INFO o.a.j.p.j.s.J.JSR223 Sampler - Setup Cleanup: Run time json file: C:/JMeter_API_Framework//results/apiRunTimeValues.json
+2023-07-07 14:02:00,284 INFO o.a.j.p.j.s.J.JSR223 Sampler - Setup Cleanup: JSON File exist
+2023-07-07 14:02:00,284 INFO o.a.j.p.j.s.J.JSR223 Sampler - Setup Cleanup: Create random variables
+2023-07-07 14:02:00,313 INFO o.a.j.p.j.s.J.JSR223 Sampler - Setup Cleanup: randomValue=zBPPKHiybzvSoGq
+2023-07-07 14:02:00,315 INFO o.a.j.p.j.s.J.JSR223 Sampler - Setup Cleanup: randomNumber=274071644247467
+2023-07-07 14:02:00,319 INFO o.a.j.p.j.s.J.JSR223 Sampler - Setup Cleanup: change this activeFlag=null
+2023-07-07 14:02:00,321 ERROR o.a.j.u.BeanShellInterpreter: Error invoking bsh method: eval	Sourced file: inline evaluation of: `` 1 <= ${STEPNUMBER_#} ;'' Token Parsing Error: Lexical error at line 1, column 21.  Encountered: "}" (125), after : "#"
+2023-07-07 14:02:00,322 WARN o.a.j.f.BeanShell: Error running BSH script
+org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval	Sourced file: inline evaluation of: `` 1 <= ${STEPNUMBER_#} ;'' Token Parsing Error: Lexical error at line 1, column 21.  Encountered: "}" (125), after : "#"
+	at org.apache.jmeter.util.BeanShellInterpreter.bshInvoke(BeanShellInterpreter.java:179) ~[ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.util.BeanShellInterpreter.eval(BeanShellInterpreter.java:185) ~[ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.functions.BeanShell.execute(BeanShell.java:99) [ApacheJMeter_functions.jar:5.4.1]
+	at org.apache.jmeter.engine.util.CompoundVariable.execute(CompoundVariable.java:138) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.engine.util.CompoundVariable.execute(CompoundVariable.java:113) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.testelement.property.FunctionProperty.getStringValue(FunctionProperty.java:100) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.control.WhileController.getCondition(WhileController.java:142) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.control.WhileController.endOfLoop(WhileController.java:62) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.control.WhileController.next(WhileController.java:112) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.control.GenericController.nextIsAController(GenericController.java:222) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.control.GenericController.next(GenericController.java:175) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.control.GenericController.nextIsAController(GenericController.java:222) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.control.GenericController.next(GenericController.java:175) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.control.GenericController.nextIsAController(GenericController.java:222) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.control.GenericController.next(GenericController.java:175) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.control.IfController.next(IfController.java:236) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.control.GenericController.nextIsAController(GenericController.java:222) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.control.GenericController.next(GenericController.java:175) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.control.LoopController.next(LoopController.java:134) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.threads.AbstractThreadGroup.next(AbstractThreadGroup.java:91) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:291) [ApacheJMeter_core.jar:5.4.1]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+Caused by: java.lang.reflect.InvocationTargetException
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.apache.jmeter.util.BeanShellInterpreter.bshInvoke(BeanShellInterpreter.java:162) ~[ApacheJMeter_core.jar:5.4.1]
+	... 21 more
+Caused by: bsh.EvalError: Sourced file: inline evaluation of: `` 1 <= ${STEPNUMBER_#} ;'' Token Parsing Error: Lexical error at line 1, column 21.  Encountered: "}" (125), after : "#"
+	at bsh.Interpreter.eval(Interpreter.java:710) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Interpreter.eval(Interpreter.java:750) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Interpreter.eval(Interpreter.java:739) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.apache.jmeter.util.BeanShellInterpreter.bshInvoke(BeanShellInterpreter.java:162) ~[ApacheJMeter_core.jar:5.4.1]
+	... 21 more
+Caused by: bsh.TokenMgrError: Lexical error at line 1, column 21.  Encountered: "}" (125), after : "#"
+	at bsh.ParserTokenManager.getNextToken(ParserTokenManager.java:2130) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.jj_scan_token(Parser.java:5986) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.jj_3_7(Parser.java:4300) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.jj_3R_29(Parser.java:4319) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.jj_3R_37(Parser.java:5057) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.jj_3R_101(Parser.java:4965) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.jj_3R_57(Parser.java:5032) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.jj_3R_33(Parser.java:5103) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.jj_3R_107(Parser.java:4171) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.jj_3R_70(Parser.java:4235) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.jj_3R_39(Parser.java:4227) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.jj_3R_133(Parser.java:4769) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.jj_3R_104(Parser.java:4851) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.jj_3R_58(Parser.java:4955) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.jj_3R_33(Parser.java:5107) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.jj_3_12(Parser.java:5150) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.jj_2_12(Parser.java:3786) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.PostfixExpression(Parser.java:1985) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.UnaryExpressionNotPlusMinus(Parser.java:1916) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.UnaryExpression(Parser.java:1806) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.MultiplicativeExpression(Parser.java:1698) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.AdditiveExpression(Parser.java:1653) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.ShiftExpression(Parser.java:1592) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.RelationalExpression(Parser.java:1571) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.InstanceOfExpression(Parser.java:1494) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.EqualityExpression(Parser.java:1449) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.AndExpression(Parser.java:1404) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.ExclusiveOrExpression(Parser.java:1371) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.InclusiveOrExpression(Parser.java:1326) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.ConditionalAndExpression(Parser.java:1281) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.ConditionalOrExpression(Parser.java:1236) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.ConditionalExpression(Parser.java:1195) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.Expression(Parser.java:1093) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.StatementExpression(Parser.java:2864) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.Statement(Parser.java:2698) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.BlockStatement(Parser.java:2819) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.Line(Parser.java:172) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Interpreter.Line(Interpreter.java:1011) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Interpreter.eval(Interpreter.java:641) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Interpreter.eval(Interpreter.java:750) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Interpreter.eval(Interpreter.java:739) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.apache.jmeter.util.BeanShellInterpreter.bshInvoke(BeanShellInterpreter.java:162) ~[ApacheJMeter_core.jar:5.4.1]
+	... 21 more
+2023-07-07 14:02:00,387 INFO o.a.j.p.j.s.J.JSR223 Sampler: debug USER_METHOD=null
+2023-07-07 14:02:00,396 ERROR o.a.j.p.j.s.JSR223Sampler: Problem in JSR223 script JSR223 Sampler, message: javax.script.ScriptException: java.lang.NullPointerException: Cannot invoke method replaceAll() on null object
+javax.script.ScriptException: java.lang.NullPointerException: Cannot invoke method replaceAll() on null object
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:320) ~[groovy-jsr223-3.0.7.jar:3.0.7]
+	at org.codehaus.groovy.jsr223.GroovyCompiledScript.eval(GroovyCompiledScript.java:71) ~[groovy-jsr223-3.0.7.jar:3.0.7]
+	at javax.script.CompiledScript.eval(CompiledScript.java:89) ~[java.scripting:?]
+	at org.apache.jmeter.util.JSR223TestElement.processFileOrScript(JSR223TestElement.java:217) ~[ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.protocol.java.sampler.JSR223Sampler.sample(JSR223Sampler.java:72) [ApacheJMeter_java.jar:5.4.1]
+	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:638) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:558) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:489) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:256) [ApacheJMeter_core.jar:5.4.1]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+Caused by: java.lang.NullPointerException: Cannot invoke method replaceAll() on null object
+	at org.codehaus.groovy.runtime.NullObject.invokeMethod(NullObject.java:91) ~[groovy-3.0.7.jar:3.0.7]
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:44) ~[groovy-3.0.7.jar:3.0.7]
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47) ~[groovy-3.0.7.jar:3.0.7]
+	at org.codehaus.groovy.runtime.callsite.NullCallSite.call(NullCallSite.java:34) ~[groovy-3.0.7.jar:3.0.7]
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47) ~[groovy-3.0.7.jar:3.0.7]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125) ~[groovy-3.0.7.jar:3.0.7]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:148) ~[groovy-3.0.7.jar:3.0.7]
+	at Script4.run(Script4.groovy:34) ~[?:?]
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:317) ~[groovy-jsr223-3.0.7.jar:3.0.7]
+	... 9 more
+2023-07-07 14:02:00,589 ERROR o.a.j.m.JSR223PreProcessor: Problem in JSR223 script, JSR223 PreProcessor
+javax.script.ScriptException: java.net.MalformedURLException: unknown protocol: ${protocol}
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:320) ~[groovy-jsr223-3.0.7.jar:3.0.7]
+	at org.codehaus.groovy.jsr223.GroovyCompiledScript.eval(GroovyCompiledScript.java:71) ~[groovy-jsr223-3.0.7.jar:3.0.7]
+	at javax.script.CompiledScript.eval(CompiledScript.java:89) ~[java.scripting:?]
+	at org.apache.jmeter.util.JSR223TestElement.processFileOrScript(JSR223TestElement.java:217) ~[ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.modifiers.JSR223PreProcessor.process(JSR223PreProcessor.java:45) [ApacheJMeter_components.jar:5.4.1]
+	at org.apache.jmeter.threads.JMeterThread.runPreProcessors(JMeterThread.java:965) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:549) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:489) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:256) [ApacheJMeter_core.jar:5.4.1]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+Caused by: java.net.MalformedURLException: unknown protocol: ${protocol}
+	at java.net.URL.<init>(URL.java:452) ~[?:?]
+	at java.net.URL.<init>(URL.java:338) ~[?:?]
+	at java.net.URL.<init>(URL.java:361) ~[?:?]
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.getUrl(HTTPSamplerBase.java:1118) ~[ApacheJMeter_http.jar:5.4.1]
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase$getUrl$0.call(Unknown Source) ~[?:?]
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47) ~[groovy-3.0.7.jar:3.0.7]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125) ~[groovy-3.0.7.jar:3.0.7]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:130) ~[groovy-3.0.7.jar:3.0.7]
+	at Script5.run(Script5.groovy:62) ~[?:?]
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:317) ~[groovy-jsr223-3.0.7.jar:3.0.7]
+	... 9 more
+2023-07-07 14:02:00,599 ERROR o.a.j.u.BeanShellInterpreter: Error invoking bsh method: eval	Sourced file: inline evaluation of: ``/* ========================================================================= */  . . . '' : Typed variable declaration
+2023-07-07 14:02:00,599 WARN o.a.j.m.BeanShellPreProcessor: Problem in BeanShell script. org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval	Sourced file: inline evaluation of: ``/* ========================================================================= */  . . . '' : Typed variable declaration
+2023-07-07 14:02:00,612 ERROR o.a.j.t.JSR223Timer: Problem in JSR223 script, JSR223 Timer
+javax.script.ScriptException: java.lang.NullPointerException: Cannot invoke method length() on null object
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:320) ~[groovy-jsr223-3.0.7.jar:3.0.7]
+	at org.codehaus.groovy.jsr223.GroovyCompiledScript.eval(GroovyCompiledScript.java:71) ~[groovy-jsr223-3.0.7.jar:3.0.7]
+	at javax.script.CompiledScript.eval(CompiledScript.java:89) ~[java.scripting:?]
+	at org.apache.jmeter.util.JSR223TestElement.processFileOrScript(JSR223TestElement.java:217) ~[ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.timers.JSR223Timer.delay(JSR223Timer.java:43) [ApacheJMeter_components.jar:5.4.1]
+	at org.apache.jmeter.threads.JMeterThread.delay(JMeterThread.java:982) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:554) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:489) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:256) [ApacheJMeter_core.jar:5.4.1]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+Caused by: java.lang.NullPointerException: Cannot invoke method length() on null object
+	at org.codehaus.groovy.runtime.NullObject.invokeMethod(NullObject.java:91) ~[groovy-3.0.7.jar:3.0.7]
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:44) ~[groovy-3.0.7.jar:3.0.7]
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47) ~[groovy-3.0.7.jar:3.0.7]
+	at org.codehaus.groovy.runtime.callsite.NullCallSite.call(NullCallSite.java:34) ~[groovy-3.0.7.jar:3.0.7]
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47) ~[groovy-3.0.7.jar:3.0.7]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125) ~[groovy-3.0.7.jar:3.0.7]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:130) ~[groovy-3.0.7.jar:3.0.7]
+	at Script6.run(Script6.groovy:2) ~[?:?]
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:317) ~[groovy-jsr223-3.0.7.jar:3.0.7]
+	... 9 more
+2023-07-07 14:02:00,635 INFO o.a.j.e.J.JSR223 PostProcessor: Run time path: C:/JMeter_API_Framework//results
+2023-07-07 14:02:00,635 INFO o.a.j.e.J.JSR223 PostProcessor: get randomValue: zBPPKHiybzvSoGq
+2023-07-07 14:02:00,635 INFO o.a.j.e.J.JSR223 PostProcessor: get randomNumber: 274071644247467
+2023-07-07 14:02:00,635 INFO o.a.j.e.J.JSR223 PostProcessor: get activeFlag: Y
+2023-07-07 14:02:00,635 INFO o.a.j.e.J.JSR223 PostProcessor: Post request operations, deleting headers ...
+2023-07-07 14:02:00,635 INFO o.a.j.e.J.JSR223 PostProcessor: Deleting 3 headers added
+2023-07-07 14:02:00,645 INFO o.a.j.e.J.JSR223 PostProcessor: Post deleting, num headers: 0, headers: []
+2023-07-07 14:02:00,646 ERROR o.a.j.t.JMeterThread: Error while processing sampler: 'TC-${TC_NUMBER}_STEP-${STEPNUMBER}_LABEL-${LABEL}'.
+java.lang.NumberFormatException: For input string: "${jsonMatchNumber}"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65) ~[?:?]
+	at java.lang.Integer.parseInt(Integer.java:638) ~[?:?]
+	at java.lang.Integer.parseInt(Integer.java:770) ~[?:?]
+	at org.apache.jmeter.extractor.json.jsonpath.JSONPostProcessor.getMatchNumbersAsInt(JSONPostProcessor.java:297) ~[ApacheJMeter_components.jar:5.4.1]
+	at org.apache.jmeter.extractor.json.jsonpath.JSONPostProcessor.process(JSONPostProcessor.java:69) ~[ApacheJMeter_components.jar:5.4.1]
+	at org.apache.jmeter.threads.JMeterThread.runPostProcessors(JMeterThread.java:955) ~[ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:573) ~[ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:489) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:256) [ApacheJMeter_core.jar:5.4.1]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+2023-07-07 14:02:00,655 ERROR o.a.j.u.BeanShellInterpreter: Error invoking bsh method: eval	Sourced file: inline evaluation of: `` 1 <= ${STEPNUMBER_#} ;'' Token Parsing Error: Lexical error at line 1, column 21.  Encountered: "}" (125), after : "#"
+2023-07-07 14:02:00,655 WARN o.a.j.f.BeanShell: Error running BSH script
+org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval	Sourced file: inline evaluation of: `` 1 <= ${STEPNUMBER_#} ;'' Token Parsing Error: Lexical error at line 1, column 21.  Encountered: "}" (125), after : "#"
+	at org.apache.jmeter.util.BeanShellInterpreter.bshInvoke(BeanShellInterpreter.java:179) ~[ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.util.BeanShellInterpreter.eval(BeanShellInterpreter.java:185) ~[ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.functions.BeanShell.execute(BeanShell.java:99) [ApacheJMeter_functions.jar:5.4.1]
+	at org.apache.jmeter.engine.util.CompoundVariable.execute(CompoundVariable.java:138) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.engine.util.CompoundVariable.execute(CompoundVariable.java:113) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.testelement.property.FunctionProperty.getStringValue(FunctionProperty.java:100) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.control.WhileController.getCondition(WhileController.java:142) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.control.WhileController.endOfLoop(WhileController.java:62) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.control.WhileController.nextIsNull(WhileController.java:85) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.control.GenericController.next(GenericController.java:170) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.control.WhileController.next(WhileController.java:117) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.control.GenericController.nextIsAController(GenericController.java:225) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.control.GenericController.next(GenericController.java:175) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.control.WhileController.next(WhileController.java:117) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.control.GenericController.nextIsAController(GenericController.java:222) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.control.GenericController.next(GenericController.java:175) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.control.GenericController.nextIsAController(GenericController.java:222) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.control.GenericController.next(GenericController.java:175) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.control.GenericController.nextIsAController(GenericController.java:222) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.control.GenericController.next(GenericController.java:175) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.control.IfController.next(IfController.java:236) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.control.GenericController.nextIsAController(GenericController.java:222) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.control.GenericController.next(GenericController.java:175) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.control.LoopController.next(LoopController.java:134) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.threads.AbstractThreadGroup.next(AbstractThreadGroup.java:91) [ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:291) [ApacheJMeter_core.jar:5.4.1]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+Caused by: java.lang.reflect.InvocationTargetException
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.apache.jmeter.util.BeanShellInterpreter.bshInvoke(BeanShellInterpreter.java:162) ~[ApacheJMeter_core.jar:5.4.1]
+	... 26 more
+Caused by: bsh.EvalError: Sourced file: inline evaluation of: `` 1 <= ${STEPNUMBER_#} ;'' Token Parsing Error: Lexical error at line 1, column 21.  Encountered: "}" (125), after : "#"
+	at bsh.Interpreter.eval(Interpreter.java:710) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Interpreter.eval(Interpreter.java:750) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Interpreter.eval(Interpreter.java:739) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.apache.jmeter.util.BeanShellInterpreter.bshInvoke(BeanShellInterpreter.java:162) ~[ApacheJMeter_core.jar:5.4.1]
+	... 26 more
+Caused by: bsh.TokenMgrError: Lexical error at line 1, column 21.  Encountered: "}" (125), after : "#"
+	at bsh.ParserTokenManager.getNextToken(ParserTokenManager.java:2130) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.jj_scan_token(Parser.java:5986) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.jj_3_7(Parser.java:4300) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.jj_3R_29(Parser.java:4319) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.jj_3R_37(Parser.java:5057) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.jj_3R_101(Parser.java:4965) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.jj_3R_57(Parser.java:5032) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.jj_3R_33(Parser.java:5103) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.jj_3R_107(Parser.java:4171) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.jj_3R_70(Parser.java:4235) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.jj_3R_39(Parser.java:4227) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.jj_3R_133(Parser.java:4769) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.jj_3R_104(Parser.java:4851) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.jj_3R_58(Parser.java:4955) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.jj_3R_33(Parser.java:5107) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.jj_3_12(Parser.java:5150) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.jj_2_12(Parser.java:3786) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.PostfixExpression(Parser.java:1985) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.UnaryExpressionNotPlusMinus(Parser.java:1916) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.UnaryExpression(Parser.java:1806) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.MultiplicativeExpression(Parser.java:1698) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.AdditiveExpression(Parser.java:1653) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.ShiftExpression(Parser.java:1592) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.RelationalExpression(Parser.java:1571) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.InstanceOfExpression(Parser.java:1494) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.EqualityExpression(Parser.java:1449) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.AndExpression(Parser.java:1404) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.ExclusiveOrExpression(Parser.java:1371) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.InclusiveOrExpression(Parser.java:1326) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.ConditionalAndExpression(Parser.java:1281) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.ConditionalOrExpression(Parser.java:1236) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.ConditionalExpression(Parser.java:1195) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.Expression(Parser.java:1093) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.StatementExpression(Parser.java:2864) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.Statement(Parser.java:2698) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.BlockStatement(Parser.java:2819) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Parser.Line(Parser.java:172) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Interpreter.Line(Interpreter.java:1011) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Interpreter.eval(Interpreter.java:641) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Interpreter.eval(Interpreter.java:750) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at bsh.Interpreter.eval(Interpreter.java:739) ~[bsh-2.0b6.jar:2.0b6 2016-02-05 05:16:19]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.apache.jmeter.util.BeanShellInterpreter.bshInvoke(BeanShellInterpreter.java:162) ~[ApacheJMeter_core.jar:5.4.1]
+	... 26 more
+2023-07-07 14:02:00,656 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-1
+2023-07-07 14:02:00,656 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
+2023-07-07 14:02:00,662 INFO o.a.j.e.StandardJMeterEngine: Starting tearDown thread groups
+2023-07-07 14:02:00,662 INFO o.a.j.e.StandardJMeterEngine: Starting tearDown ThreadGroup: 1 : tearDown Thread Group
+2023-07-07 14:02:00,662 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group tearDown Thread Group.
+2023-07-07 14:02:00,662 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2023-07-07 14:02:00,662 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 delayedStart=false
+2023-07-07 14:02:00,662 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2023-07-07 14:02:00,663 INFO o.a.j.t.JMeterThread: Thread started: tearDown Thread Group 1-1
+2023-07-07 14:02:05,718 INFO o.a.j.p.j.s.J.delete db: Full path of database file: importedTestCases.db
+2023-07-07 14:02:05,720 INFO o.a.j.p.j.s.J.delete db: db file exists thus deleting...
+2023-07-07 14:02:05,721 INFO o.a.j.p.j.s.J.delete db: Successfully Deleted file: importedTestCases.db
+2023-07-07 14:02:05,723 INFO o.a.j.t.JMeterThread: Thread is done: tearDown Thread Group 1-1
+2023-07-07 14:02:05,723 INFO o.a.j.t.JMeterThread: Thread finished: tearDown Thread Group 1-1
+2023-07-07 14:02:05,723 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2023-07-07 14:02:05,725 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
